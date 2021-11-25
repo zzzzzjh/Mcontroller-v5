@@ -1,0 +1,6 @@
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+ekf_rangefinder.cpp:9:1:EKF_Rangefinder::EKF_Rangefinder(float)	16	static
+ekf_rangefinder.cpp:15:7:float EKF_Rangefinder::_filt_alpha(float, float)	32	static
+ekf_rangefinder.cpp:22:6:void EKF_Rangefinder::update(bool&)	56	static
+ekf_rangefinder.cpp:87:1:void __static_initialization_and_destruction_0(int, int)	16	static
+ekf_rangefinder.cpp:87:1:cpp)	8	static

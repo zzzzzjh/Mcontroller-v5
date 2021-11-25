@@ -1,0 +1,3 @@
+gps.c:12:6:GPS_Init	8	static
+gps.c:18:6:GPS_Baud_Reset	16	static
+gps.c:34:6:get_gps_state	4	static

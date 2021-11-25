@@ -1,0 +1,6 @@
+lsm303d.c:163:16:LSM303D_Spi_Com	32	static
+lsm303d.c:179:16:read_reg	32	static
+lsm303d.c:194:13:disable_i2c	16	static
+lsm303d.c:210:6:LSM303D_Init	8	static
+lsm303d.c:237:6:LSM303D_Get_Accel_Data	40	static
+lsm303d.c:265:6:LSM303D_Get_Mag_Accel_Data	56	static

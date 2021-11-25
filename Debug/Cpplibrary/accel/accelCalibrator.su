@@ -1,0 +1,33 @@
+cmath:584:3:constexpr bool std::isinf(float)	16	static
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+accelCalibrator.h:105:9:AccelCalibrator::param_u::param_u()	16	static
+accelCalibrator.cpp:18:1:AccelCalibrator::AccelCalibrator()	16	static
+accelCalibrator.cpp:42:6:void AccelCalibrator::start(accel_cal_fit_type_t, uint8_t, float)	120	static
+accelCalibrator.cpp:46:6:void AccelCalibrator::start(accel_cal_fit_type_t, uint8_t, float, Vector3f, Vector3f, Vector3f)	48	static
+accelCalibrator.cpp:87:6:void AccelCalibrator::clear()	16	static
+accelCalibrator.cpp:92:6:bool AccelCalibrator::running()	16	static
+accelCalibrator.cpp:97:6:void AccelCalibrator::collect_sample()	16	static
+accelCalibrator.cpp:102:6:void AccelCalibrator::new_sample(const Vector3f&, float)	40	static
+accelCalibrator.cpp:141:6:bool AccelCalibrator::accept_result() const	16	static
+accelCalibrator.cpp:156:6:bool AccelCalibrator::get_sample(uint8_t, Vector3f&) const	48	static
+accelCalibrator.cpp:166:6:bool AccelCalibrator::get_sample_corrected(uint8_t, Vector3f&) const	128	static
+accelCalibrator.cpp:183:6:void AccelCalibrator::check_for_timeout()	24	static
+accelCalibrator.cpp:191:6:void AccelCalibrator::get_calibration(Vector3f&) const	40	static
+accelCalibrator.cpp:196:6:void AccelCalibrator::get_calibration(Vector3f&, Vector3f&) const	48	static
+accelCalibrator.cpp:202:6:void AccelCalibrator::get_calibration(Vector3f&, Vector3f&, Vector3f&) const	48	static
+accelCalibrator.cpp:228:6:bool AccelCalibrator::accept_sample(const Vector3f&)	48	static
+accelCalibrator.cpp:246:6:void AccelCalibrator::set_status(accel_cal_status_t)	16	static
+accelCalibrator.cpp:315:6:void AccelCalibrator::run_fit(uint8_t, float&)	496	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
+accelCalibrator.cpp:374:7:float AccelCalibrator::calc_residual(const Vector3f&, const AccelCalibrator::param_t&) const	128	static
+accelCalibrator.cpp:385:7:float AccelCalibrator::calc_mean_squared_residuals() const	16	static
+accelCalibrator.cpp:392:7:float AccelCalibrator::calc_mean_squared_residuals(const AccelCalibrator::param_t&) const	40	static
+accelCalibrator.cpp:410:6:void AccelCalibrator::calc_jacob(const Vector3f&, const AccelCalibrator::param_t&, AccelCalibrator::VectorP&) const	160	static
+accelCalibrator.cpp:446:9:uint8_t AccelCalibrator::get_num_params() const	16	static
+vectorN.h:32:12:VectorN<T, N>::VectorN() [with T = float; unsigned char N = 9]	16	static
+vectorN.h:41:16:T& VectorN<T, N>::operator[](uint8_t) [with T = float; unsigned char N = 9]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+accelCalibrator.cpp:455:1:void __static_initialization_and_destruction_0(int, int)	16	static
+accelCalibrator.cpp:455:1:cpp)	8	static

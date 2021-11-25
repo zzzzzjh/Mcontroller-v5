@@ -1,0 +1,12 @@
+math_inc.h:146:14:float constrain_float(float, float, float)	24	static
+math_inc.h:173:31:constexpr float degrees(float)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+motors.h:118:14:void Motors::set_desired_spool_state(Motors::spool_up_down_desired)	16	static
+motors.h:121:25:bool Motors::get_armed() const	16	static
+attitude_multi.h:116:7:void Attitude_Multi::set_yaw_target_to_current_heading()	16	static
+position.h:123:10:void PosControl::set_alt_target_to_current_alt()	16	static
+position.h:211:10:void PosControl::set_desired_velocity_z(float)	16	static
+mode_althold.cpp:11:6:bool mode_althold_init()	16	static
+mode_althold.cpp:23:6:void mode_althold()	48	static
+mode_althold.cpp:124:1:void __static_initialization_and_destruction_0(int, int)	16	static
+mode_althold.cpp:124:1:cpp)	8	static

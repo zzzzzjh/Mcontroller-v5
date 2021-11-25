@@ -1,0 +1,61 @@
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+cmath:619:3:constexpr bool std::isnan(double)	24	static
+limits:1687:7:static constexpr float std::numeric_limits<float>::epsilon()	4	static
+math.cpp:19:1:typename std::enable_if<std::is_integral<typename std::common_type<_Tp, _Up>::type>::value, bool>::type is_equal(Arithmetic1, Arithmetic2) [with Arithmetic1 = int; Arithmetic2 = int]	16	static
+math.cpp:19:1:typename std::enable_if<std::is_integral<typename std::common_type<_Tp, _Up>::type>::value, bool>::type is_equal(Arithmetic1, Arithmetic2) [with Arithmetic1 = short int; Arithmetic2 = short int]	16	static
+math.cpp:19:1:typename std::enable_if<std::is_integral<typename std::common_type<_Tp, _Up>::type>::value, bool>::type is_equal(Arithmetic1, Arithmetic2) [with Arithmetic1 = long int; Arithmetic2 = long int]	16	static
+math.cpp:31:1:typename std::enable_if<std::is_floating_point<typename std::common_type<_Tp, _Up>::type>::value, bool>::type is_equal(Arithmetic1, Arithmetic2) [with Arithmetic1 = float; Arithmetic2 = float]	24	static
+math.cpp:31:1:typename std::enable_if<std::is_floating_point<typename std::common_type<_Tp, _Up>::type>::value, bool>::type is_equal(Arithmetic1, Arithmetic2) [with Arithmetic1 = double; Arithmetic2 = double]	32	static
+math.cpp:50:7:float safe_asin(T) [with T = int]	24	static
+math.cpp:50:7:float safe_asin(T) [with T = short int]	24	static
+math.cpp:50:7:float safe_asin(T) [with T = float]	24	static
+math.cpp:50:7:float safe_asin(T) [with T = double]	24	static
+math.cpp:71:7:float safe_sqrt(T) [with T = int]	24	static
+math.cpp:71:7:float safe_sqrt(T) [with T = short int]	24	static
+math.cpp:71:7:float safe_sqrt(T) [with T = float]	24	static
+math.cpp:71:7:float safe_sqrt(T) [with T = double]	24	static
+math.cpp:88:7:float linear_interpolate(float, float, float, float, float)	32	static
+math.cpp:103:7:float wrap_180(T, float) [with T = int]	24	static
+math.cpp:103:7:float wrap_180(T, float) [with T = short int]	24	static
+math.cpp:103:7:float wrap_180(T, float) [with T = float]	24	static
+math.cpp:103:7:float wrap_180(T, float) [with T = double]	32	static
+math.cpp:118:6:0e+2f)) wrap_180_cd(T) [with T = float]	16	static
+math.cpp:118:6:0e+2f)) wrap_180_cd(T) [with T = int]	16	static
+math.cpp:118:6:0e+2f)) wrap_180_cd(T) [with T = long int]	16	static
+math.cpp:118:6:0e+2f)) wrap_180_cd(T) [with T = short int]	16	static
+math.cpp:118:6:0e+2f)) wrap_180_cd(T) [with T = double]	16	static
+math.cpp:130:7:float wrap_360(T, float) [with T = int]	24	static
+math.cpp:130:7:float wrap_360(T, float) [with T = short int]	24	static
+math.cpp:130:7:float wrap_360(T, float) [with T = long int]	24	static
+math.cpp:130:7:float wrap_360(T, float) [with T = float]	24	static
+math.cpp:130:7:float wrap_360(T, float) [with T = double]	32	static
+math.cpp:147:6:0e+2f)) wrap_360_cd(T) [with T = float]	16	static
+math.cpp:147:6:0e+2f)) wrap_360_cd(T) [with T = int]	16	static
+math.cpp:147:6:0e+2f)) wrap_360_cd(T) [with T = long int]	16	static
+math.cpp:147:6:0e+2f)) wrap_360_cd(T) [with T = short int]	16	static
+math.cpp:147:6:0e+2f)) wrap_360_cd(T) [with T = double]	16	static
+math.cpp:159:7:float wrap_PI(T) [with T = int]	24	static
+math.cpp:159:7:float wrap_PI(T) [with T = short int]	24	static
+math.cpp:159:7:float wrap_PI(T) [with T = float]	24	static
+math.cpp:159:7:float wrap_PI(T) [with T = double]	24	static
+math.cpp:174:7:float wrap_2PI(T) [with T = int]	24	static
+math.cpp:174:7:float wrap_2PI(T) [with T = short int]	24	static
+math.cpp:174:7:float wrap_2PI(T) [with T = float]	24	static
+math.cpp:174:7:float wrap_2PI(T) [with T = double]	24	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = int]	24	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = long int]	24	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = long long int]	40	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = short int]	16	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = float]	24	static
+math.cpp:189:3:T constrain_value(T, T, T) [with T = double]	24	static
+math.cpp:220:10:uint16_t get_random16()	4	static
+math.cpp:229:7:float rand_float()	8	static
+math.cpp:234:10:Vector3f rand_vec3f()	24	static
+math.cpp:245:6:bool is_valid_octal(uint16_t)	16	static
+cmath:632:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, bool>::__type std::isnan(_Tp) [with _Tp = short int]	16	static
+cmath:632:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, bool>::__type std::isnan(_Tp) [with _Tp = long int]	16	static
+cmath:632:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, bool>::__type std::isnan(_Tp) [with _Tp = long long int]	16	static
+cmath:632:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, bool>::__type std::isnan(_Tp) [with _Tp = int]	16	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+vector3.h:136:10:void Vector3<T>::normalize() [with T = float]	16	static
+math.cpp:103:7:float wrap_180(T, float) [with T = long int]	24	static

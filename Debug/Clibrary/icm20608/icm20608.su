@@ -1,0 +1,4 @@
+icm20608.c:113:16:ICM20608_Spi_Com	32	static
+icm20608.c:129:6:IMU_Init	32	static
+icm20608.c:202:6:IMU_Request_Data	8	static
+icm20608.c:207:6:IMU_Get_Data	8	static

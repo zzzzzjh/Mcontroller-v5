@@ -1,0 +1,67 @@
+math_inc.h:146:14:float constrain_float(float, float, float)	24	static
+math_inc.h:167:31:constexpr float radians(float)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+motors.h:159:25:float Motors::get_throttle() const	16	static
+motors.h:160:19:float Motors::get_throttle_hover() const	16	static
+pid.h:61:17:float PID::imax() const	16	static
+pid.h:69:17:void PID::imax(float)	16	static
+pid.h:73:17:float PID::get_integrator() const	16	static
+pid.h:74:17:void PID::set_integrator(float)	16	static
+p.h:29:5:P::P(const float&)	16	static
+p.h:52:17:const float P::kP() const	16	static
+attitude_multi.h:229:8:float Attitude_Multi::lean_angle_max() const	16	static
+pid_2d.h:34:17:void PID_2D::set_input(const Vector3f&)	24	static
+pid_2d.h:69:17:void PID_2D::set_integrator(const Vector3f&)	16	static
+position.h:232:10:void PosControl::freeze_ff_z()	16	static
+position.h:359:10:void PosControl::init_ekf_z_reset()	16	static
+position.cpp:14:1:PosControl::PosControl(Motors&, Attitude_Multi&)	80	static
+position.cpp:67:6:void PosControl::set_dt(float)	16	static
+position.cpp:83:6:void PosControl::set_speed_z(float, float)	24	static
+position.cpp:97:6:void PosControl::set_accel_z(float)	16	static
+position.cpp:110:6:void PosControl::set_alt_target_with_slew(float, float)	40	static
+position.cpp:136:6:void PosControl::set_alt_target_from_climb_rate(float, float, bool)	24	static
+position.cpp:155:6:void PosControl::set_alt_target_from_climb_rate_ff(float, float, bool)	40	static
+position.cpp:189:6:void PosControl::add_takeoff_climb_rate(float, float)	24	static
+position.cpp:195:6:void PosControl::shift_alt_target(float)	16	static
+position.cpp:206:6:void PosControl::relax_alt_hold_controllers(float)	24	static
+position.cpp:221:7:float PosControl::get_alt_error() const	24	static
+position.cpp:227:6:void PosControl::set_target_to_stopping_point_z()	16	static
+position.cpp:236:6:void PosControl::get_stopping_point_z(Vector3f&) const	40	static
+position.cpp:276:6:void PosControl::init_takeoff()	32	static
+position.cpp:291:6:bool PosControl::is_active_z() const	16	static
+position.cpp:297:6:void PosControl::update_z_controller(float, float)	32	static
+position.cpp:316:6:void PosControl::calc_leash_length_z()	24	static
+position.cpp:329:6:void PosControl::run_z_controller(float, float)	72	static
+position.cpp:467:6:void PosControl::set_accel_xy(float)	16	static
+position.cpp:477:6:void PosControl::set_speed_xy(float)	16	static
+position.cpp:487:6:void PosControl::set_pos_target(const Vector3f&)	16	static
+position.cpp:500:6:void PosControl::set_xy_target(float, float)	24	static
+position.cpp:507:6:void PosControl::shift_pos_xy_target(float, float)	24	static
+position.cpp:515:6:void PosControl::set_target_to_stopping_point_xy()	16	static
+vector3.h:30:15:constexpr Vector3<T>::Vector3() [with T = float]	16	static
+position.cpp:528:6:void PosControl::get_stopping_point_xy(Vector3f&) const	64	static
+position.cpp:574:7:float PosControl::get_distance_to_target() const	16	static
+position.cpp:580:6:bool PosControl::is_active_xy() const	16	static
+position.cpp:586:7:float PosControl::get_lean_angle_max_d() const	16	static
+position.cpp:598:6:void PosControl::init_xy_controller(bool)	40	static
+position.cpp:620:6:void PosControl::lean_angles_to_accel(float&, float&) const	32	static
+position.cpp:630:6:void PosControl::update_xy_controller(float, float, float, float, float)	32	static
+position.cpp:644:6:void PosControl::calc_leash_length_xy()	24	static
+position.cpp:654:6:void PosControl::desired_accel_to_vel(float)	16	static
+position.cpp:671:6:void PosControl::desired_vel_to_pos(float)	16	static
+vector2.h:17:15:constexpr Vector2<T>::Vector2() [with T = float]	16	static
+position.cpp:692:6:void PosControl::run_xy_controller(float, float, float, float, float)	120	static
+position.cpp:795:6:void PosControl::accel_to_lean_angles(float, float, float&, float&) const	48	static
+position.cpp:810:7:float PosControl::calc_leash_length(float, float, float) const	32	static
+position.cpp:842:6:static bool PosControl::limit_vector_length(float&, float&, float)	32	static
+position.cpp:855:10:Vector3f PosControl::sqrt_controller(const Vector3f&, float, float)	40	static
+position.cpp:872:10:Vector2f PosControl::sqrt_controller(const Vector2f&, float, float, float)	32	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+vector2.h:22:15:constexpr Vector2<T>::Vector2(T, T) [with T = float]	24	static
+math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static
+math_inc.h:199:7:) [with T = float; U = float; Params = {}]	16	static
+math_inc.h:55:13:bool is_positive(T) [with T = float]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+math_inc.h:189:7:) [with T = float; Params = {float}]	24	static
+position.cpp:881:1:void __static_initialization_and_destruction_0(int, int)	16	static
+position.cpp:881:1:cpp)	8	static

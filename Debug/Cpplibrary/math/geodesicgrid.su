@@ -1,0 +1,8 @@
+geodesicgrid.cpp:172:5:static int Geodesicgrid::section(const Vector3f&, bool)	24	static
+geodesicgrid.cpp:187:5:static int Geodesicgrid::_neighbor_umbrella_component(int, int)	16	static
+geodesicgrid.cpp:195:5:static int Geodesicgrid::_from_neighbor_umbrella(int, const Vector3f&, const Vector3f&, bool)	112	static
+geodesicgrid.cpp:292:5:static int Geodesicgrid::_triangle_index(const Vector3f&, bool)	56	static
+geodesicgrid.cpp:425:5:static int Geodesicgrid::_subtriangle_index(unsigned int, const Vector3f&, bool)	56	static
+vector3.h:81:9:T& Vector3<T>::operator[](uint8_t) [with T = float]	24	static
+math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static
+vector3.h:42:10:void Vector3<T>::operator()(T, T, T) [with T = float]	24	static

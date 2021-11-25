@@ -1,0 +1,7 @@
+led.c:14:6:FMU_LED1_Control	16	static
+led.c:18:6:FMU_LED2_Control	16	static
+led.c:22:6:FMU_LED3_Control	16	static
+led.c:26:6:FMU_LED4_Control	16	static
+led.c:30:6:FMU_LED5_Control	16	static
+led.c:34:6:FMU_LED6_Control	16	static
+led.c:38:6:FMU_LED7_Control	16	static

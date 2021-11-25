@@ -1,0 +1,17 @@
+ublox.c:60:5:write	24	static
+ublox.c:86:6:get_gps_data	16	static
+ublox.c:91:6:decodeInit	4	static
+ublox.c:100:6:calcChecksum	32	static
+ublox.c:109:9:sendMessage	32	static
+ublox.c:144:6:addByteToChecksum	16	static
+ublox.c:150:9:configureMessageRate	24	static
+ublox.c:164:5:payloadRxInit	32	static
+ublox.c:411:5:payloadRxAddNavSvinfo	32	static
+ublox.c:460:10:fnv1_32_str	24	static
+ublox.c:489:5:payloadRxAddMonVer	32	static
+ublox.c:533:6:payloadRxAdd	24	static
+ublox.c:555:5:payloadRxDone	64	static
+ublox.c:814:9:ParseChar	24	static
+ublox.c:961:5:waitForAck	48	static
+ublox.c:996:9:configureMessageRateAndAck	16	static
+ublox.c:1005:5:configure	128	static

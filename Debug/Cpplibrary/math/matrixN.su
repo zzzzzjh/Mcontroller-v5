@@ -1,0 +1,5 @@
+matrixN.cpp:13:6:void MatrixN<T, N>::mult(const VectorN<T, N>&, const VectorN<T, N>&) [with T = float; unsigned char N = 4]	40	static
+matrixN.cpp:24:15:MatrixN<T, N>& MatrixN<T, N>::operator-=(const MatrixN<T, N>&) [with T = float; unsigned char N = 4]	24	static
+matrixN.cpp:36:15:MatrixN<T, N>& MatrixN<T, N>::operator+=(const MatrixN<T, N>&) [with T = float; unsigned char N = 4]	24	static
+matrixN.cpp:48:6:void MatrixN<T, N>::force_symmetry() [with T = float; unsigned char N = 4]	24	static
+vectorN.h:48:22:const T& VectorN<T, N>::operator[](uint8_t) const [with T = float; unsigned char N = 4]	16	static

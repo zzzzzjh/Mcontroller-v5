@@ -1,0 +1,6 @@
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+ekf_baro.cpp:9:1:EKF_Baro::EKF_Baro(float)	16	static
+ekf_baro.cpp:15:7:float EKF_Baro::_filt_alpha(float, float)	32	static
+ekf_baro.cpp:22:6:void EKF_Baro::update(bool&)	56	static
+ekf_baro.cpp:87:1:void __static_initialization_and_destruction_0(int, int)	16	static
+ekf_baro.cpp:87:1:cpp)	8	static

@@ -1,0 +1,31 @@
+quaternion.h:21:5:Quaternion::Quaternion()	16	static
+quaternion.h:28:5:Quaternion::Quaternion(float, float, float, float)	24	static
+quaternion.cpp:13:6:void Quaternion::rotation_matrix(Matrix3f&) const	56	static
+quaternion.cpp:37:6:void Quaternion::rotation_matrix_norm(Matrix3f&) const	64	static
+quaternion.cpp:65:6:void Quaternion::from_rotation_matrix(const Matrix3f&)	88	static
+quaternion.cpp:111:6:void Quaternion::earth_to_body(Vector3f&) const	80	static
+quaternion.cpp:120:6:void Quaternion::body_to_earth(Vector3f&) const	80	static
+quaternion.cpp:128:6:void Quaternion::from_euler(float, float, float)	48	static
+quaternion.cpp:144:6:void Quaternion::from_vector312(float, float, float)	64	static
+quaternion.cpp:152:6:void Quaternion::from_axis_angle(Vector3f)	32	static
+quaternion.cpp:164:6:void Quaternion::from_axis_angle(const Vector3f&, float)	32	static
+quaternion.cpp:180:6:void Quaternion::rotate(const Vector3f&)	32	static
+quaternion.cpp:187:6:void Quaternion::to_axis_angle(Vector3f&)	48	static
+quaternion.cpp:197:6:void Quaternion::from_axis_angle_fast(Vector3f)	32	static
+quaternion.cpp:209:6:void Quaternion::from_axis_angle_fast(const Vector3f&, float)	48	static
+quaternion.cpp:221:6:void Quaternion::rotate_fast(const Vector3f&)	72	static
+quaternion.cpp:252:7:float Quaternion::get_euler_roll() const	16	static
+quaternion.cpp:258:7:float Quaternion::get_euler_pitch() const	16	static
+quaternion.cpp:264:7:float Quaternion::get_euler_yaw() const	16	static
+quaternion.cpp:270:6:void Quaternion::to_euler(float&, float&, float&) const	24	static
+quaternion.cpp:278:10:Vector3f Quaternion::to_vector312() const	56	static
+quaternion.cpp:285:7:float Quaternion::length() const	24	static
+quaternion.cpp:290:12:Quaternion Quaternion::inverse() const	24	static
+quaternion.cpp:295:6:void Quaternion::normalize()	24	static
+quaternion.cpp:307:12:Quaternion Quaternion::operator*(const Quaternion&) const	56	static
+quaternion.cpp:328:13:Quaternion& Quaternion::operator*=(const Quaternion&)	48	static
+quaternion.cpp:348:12:Quaternion Quaternion::operator/(const Quaternion&) const	56	static
+matrix3.h:171:10:void Matrix3<T>::transpose() [with T = float]	64	static
+math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static

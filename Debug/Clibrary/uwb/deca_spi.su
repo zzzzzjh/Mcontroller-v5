@@ -1,0 +1,2 @@
+deca_spi.c:10:5:writetospi	48	dynamic
+deca_spi.c:39:5:readfromspi	56	dynamic

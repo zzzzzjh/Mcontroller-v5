@@ -1,0 +1,65 @@
+cmath:584:3:constexpr bool std::isinf(float)	16	static
+cmath:592:3:constexpr bool std::isinf(double)	32	static
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+cmath:619:3:constexpr bool std::isnan(double)	24	static
+vector3.cpp:16:6:void Vector3<T>::rotate(Rotation) [with T = float]	32	static
+vector3.cpp:241:6:void Vector3<T>::rotate_inverse(Rotation) [with T = float]	144	static
+vector3.cpp:276:7:float Vector3<T>::length() const [with T = float]	16	static
+vector3.cpp:262:12:Vector3<T> Vector3<T>::operator%(const Vector3<T>&) const [with T = float]	24	static
+vector3.cpp:270:3:T Vector3<T>::operator*(const Vector3<T>&) const [with T = float]	16	static
+vector3.cpp:379:12:Vector3<T> Vector3<T>::operator*(const Matrix3<T>&) const [with T = float]	72	static
+vector3.cpp:388:12:Matrix3<T> Vector3<T>::mul_rowcol(const Vector3<T>&) const [with T = float]	64	static
+vector3.cpp:282:13:Vector3<T>& Vector3<T>::operator*=(T) [with T = float]	16	static
+vector3.cpp:289:13:Vector3<T>& Vector3<T>::operator/=(T) [with T = float]	16	static
+vector3.cpp:296:13:Vector3<T>& Vector3<T>::operator-=(const Vector3<T>&) [with T = float]	16	static
+vector3.cpp:315:13:Vector3<T>& Vector3<T>::operator+=(const Vector3<T>&) [with T = float]	16	static
+vector3.cpp:322:12:Vector3<T> Vector3<T>::operator/(T) const [with T = float]	24	static
+vector3.cpp:328:12:Vector3<T> Vector3<T>::operator*(T) const [with T = float]	24	static
+vector3.cpp:340:12:Vector3<T> Vector3<T>::operator+(const Vector3<T>&) const [with T = float]	24	static
+vector3.cpp:334:12:Vector3<T> Vector3<T>::operator-(const Vector3<T>&) const [with T = float]	24	static
+vector3.cpp:346:12:Vector3<T> Vector3<T>::operator-() const [with T = float]	16	static
+vector3.cpp:352:6:bool Vector3<T>::operator==(const Vector3<T>&) const [with T = float]	16	static
+vector3.cpp:358:6:bool Vector3<T>::operator!=(const Vector3<T>&) const [with T = float]	16	static
+vector3.cpp:303:6:bool Vector3<T>::is_nan() const [with T = float]	16	static
+vector3.cpp:309:6:bool Vector3<T>::is_inf() const [with T = float]	16	static
+vector3.cpp:364:7:float Vector3<T>::angle(const Vector3<T>&) const [with T = float]	32	static
+vector3.cpp:398:7:float Vector3<T>::distance_to_segment(const Vector3<T>&, const Vector3<T>&) const [with T = float]	88	static
+vector3.cpp:315:13:Vector3<T>& Vector3<T>::operator+=(const Vector3<T>&) [with T = long int]	16	static
+vector3.cpp:16:6:void Vector3<T>::rotate(Rotation) [with T = double]	520	static
+vector3.cpp:241:6:void Vector3<T>::rotate_inverse(Rotation) [with T = double]	288	static
+vector3.cpp:276:7:float Vector3<T>::length() const [with T = double]	32	static
+vector3.cpp:262:12:Vector3<T> Vector3<T>::operator%(const Vector3<T>&) const [with T = double]	64	static
+vector3.cpp:270:3:T Vector3<T>::operator*(const Vector3<T>&) const [with T = double]	24	static
+vector3.cpp:379:12:Vector3<T> Vector3<T>::operator*(const Matrix3<T>&) const [with T = double]	128	static
+vector3.cpp:388:12:Matrix3<T> Vector3<T>::mul_rowcol(const Vector3<T>&) const [with T = double]	176	static
+vector3.cpp:282:13:Vector3<T>& Vector3<T>::operator*=(T) [with T = double]	24	static
+vector3.cpp:289:13:Vector3<T>& Vector3<T>::operator/=(T) [with T = double]	24	static
+vector3.cpp:296:13:Vector3<T>& Vector3<T>::operator-=(const Vector3<T>&) [with T = double]	16	static
+vector3.cpp:315:13:Vector3<T>& Vector3<T>::operator+=(const Vector3<T>&) [with T = double]	16	static
+vector3.cpp:322:12:Vector3<T> Vector3<T>::operator/(T) const [with T = double]	56	static
+vector3.cpp:328:12:Vector3<T> Vector3<T>::operator*(T) const [with T = double]	56	static
+vector3.cpp:340:12:Vector3<T> Vector3<T>::operator+(const Vector3<T>&) const [with T = double]	56	static
+vector3.cpp:334:12:Vector3<T> Vector3<T>::operator-(const Vector3<T>&) const [with T = double]	56	static
+vector3.cpp:346:12:Vector3<T> Vector3<T>::operator-() const [with T = double]	48	static
+vector3.cpp:352:6:bool Vector3<T>::operator==(const Vector3<T>&) const [with T = double]	16	static
+vector3.cpp:358:6:bool Vector3<T>::operator!=(const Vector3<T>&) const [with T = double]	16	static
+vector3.cpp:303:6:bool Vector3<T>::is_nan() const [with T = double]	16	static
+vector3.cpp:309:6:bool Vector3<T>::is_inf() const [with T = double]	16	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = double]	24	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
+math_inc.h:199:7:) [with T = float; U = float; Params = {float}]	24	static
+matrix3.h:143:33:Vector3<T> Matrix3<T>::colx() const [with T = float]	16	static
+matrix3.h:149:23:Vector3<T> Matrix3<T>::coly() const [with T = float]	16	static
+matrix3.h:155:23:Vector3<T> Matrix3<T>::colz() const [with T = float]	16	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = double]	40	static
+math_inc.h:199:7:) [with T = double; U = double; Params = {double}]	32	static
+matrix3.h:143:33:Vector3<T> Matrix3<T>::colx() const [with T = double]	40	static
+matrix3.h:149:23:Vector3<T> Matrix3<T>::coly() const [with T = double]	40	static
+matrix3.h:155:23:Vector3<T> Matrix3<T>::colz() const [with T = double]	40	static
+math_inc.h:189:7:) [with T = float; Params = {float, float}]	32	static
+math_inc.h:189:7:) [with T = double; Params = {double, double}]	32	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+math_inc.h:189:7:) [with T = float; Params = {float}]	24	static
+math_inc.h:179:7:float sq(T) [with T = double]	16	static
+math_inc.h:189:7:) [with T = double; Params = {double}]	32	static

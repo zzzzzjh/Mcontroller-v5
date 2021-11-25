@@ -1,0 +1,256 @@
+std_abs.h:75:3:constexpr float std::abs(float)	16	static
+cmath:241:3:constexpr float std::fabs(float)	16	static
+cmath:584:3:constexpr bool std::isinf(float)	16	static
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+checksum.h:34:20:void crc_accumulate(uint8_t, uint16_t*)	24	static
+checksum.h:51:20:void crc_init(uint16_t*)	16	static
+checksum.h:64:24:uint16_t crc_calculate(const uint8_t*, uint16_t)	24	static
+checksum.h:84:20:void crc_accumulate_buffer(uint16_t*, const char*, uint16_t)	32	static
+mavlink_helpers.h:17:34:mavlink_status_t* mavlink_get_channel_status(uint8_t)	16	static
+mavlink_helpers.h:33:35:mavlink_message_t* mavlink_get_channel_buffer(uint8_t)	16	static
+mavlink_helpers.h:68:25:uint16_t mavlink_finalize_message_chan(mavlink_message_t*, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	24	static
+mavlink_helpers.h:101:25:uint16_t mavlink_finalize_message(mavlink_message_t*, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	32	static
+mavlink_helpers.h:198:21:void mavlink_start_checksum(mavlink_message_t*)	16	static
+mavlink_helpers.h:203:21:void mavlink_update_checksum(mavlink_message_t*, uint8_t)	16	static
+mavlink_helpers.h:221:24:uint8_t mavlink_frame_char_buffer(mavlink_message_t*, mavlink_status_t*, uint8_t, mavlink_message_t*, mavlink_status_t*)	32	static
+mavlink_helpers.h:447:24:uint8_t mavlink_frame_char(uint8_t, uint8_t, mavlink_message_t*, mavlink_status_t*)	40	static
+mavlink_helpers.h:498:24:uint8_t mavlink_parse_char(uint8_t, uint8_t, mavlink_message_t*, mavlink_status_t*)	40	static
+protocol.h:176:20:void mav_array_memcpy(void*, const void*, size_t)	24	static
+mavlink_msg_heartbeat.h:66:24:uint16_t mavlink_msg_heartbeat_pack(uint8_t, uint8_t, mavlink_message_t*, uint8_t, uint8_t, uint8_t, uint32_t, uint8_t)	40	static
+mavlink_msg_heartbeat.h:146:24:uint16_t mavlink_msg_heartbeat_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_heartbeat_t*)	56	static
+mavlink_msg_heartbeat.h:321:20:void mavlink_msg_heartbeat_decode(const mavlink_message_t*, mavlink_heartbeat_t*)	24	static
+mavlink_msg_set_mode.h:252:20:void mavlink_msg_set_mode_decode(const mavlink_message_t*, mavlink_set_mode_t*)	24	static
+mavlink_msg_attitude.h:71:24:uint16_t mavlink_msg_attitude_pack(uint8_t, uint8_t, mavlink_message_t*, uint32_t, float, float, float, float, float, float)	88	static
+mavlink_msg_attitude.h:157:24:uint16_t mavlink_msg_attitude_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_attitude_t*)	40	static
+mavlink_msg_attitude.h:348:20:void mavlink_msg_attitude_decode(const mavlink_message_t*, mavlink_attitude_t*)	24	static
+mavlink_msg_local_position_ned_cov.h:460:20:void mavlink_msg_local_position_ned_cov_decode(const mavlink_message_t*, mavlink_local_position_ned_cov_t*)	24	static
+mavlink_msg_rc_channels.h:127:24:uint16_t mavlink_msg_rc_channels_pack(uint8_t, uint8_t, mavlink_message_t*, uint32_t, uint8_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint8_t)	80	static
+mavlink_msg_rc_channels.h:283:24:uint16_t mavlink_msg_rc_channels_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_rc_channels_t*)	176	static
+mavlink_msg_rc_channels_override.h:420:20:void mavlink_msg_rc_channels_override_decode(const mavlink_message_t*, mavlink_rc_channels_override_t*)	24	static
+mavlink_msg_command_long.h:87:24:uint16_t mavlink_msg_command_long_pack(uint8_t, uint8_t, mavlink_message_t*, uint8_t, uint8_t, uint16_t, uint8_t, float, float, float, float, float, float, float)	96	static
+mavlink_msg_command_long.h:193:24:uint16_t mavlink_msg_command_long_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_command_long_t*)	72	static
+mavlink_msg_command_long.h:444:20:void mavlink_msg_command_long_decode(const mavlink_message_t*, mavlink_command_long_t*)	24	static
+mavlink_msg_command_ack.h:51:24:uint16_t mavlink_msg_command_ack_pack(uint8_t, uint8_t, mavlink_message_t*, uint16_t, uint8_t)	32	static
+mavlink_msg_command_ack.h:112:24:uint16_t mavlink_msg_command_ack_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_command_ack_t*)	32	static
+mavlink_msg_set_position_target_local_ned.h:564:20:void mavlink_msg_set_position_target_local_ned_decode(const mavlink_message_t*, mavlink_set_position_target_local_ned_t*)	24	static
+mavlink_msg_battery_status.h:79:24:uint16_t mavlink_msg_battery_status_pack(uint8_t, uint8_t, mavlink_message_t*, uint8_t, uint8_t, uint8_t, int16_t, const uint16_t*, int16_t, int32_t, int32_t, int8_t)	64	static
+mavlink_msg_battery_status.h:171:24:uint16_t mavlink_msg_battery_status_encode(uint8_t, uint8_t, mavlink_message_t*, const mavlink_battery_status_t*)	72	static
+math_inc.h:146:14:float constrain_float(float, float, float)	24	static
+math_inc.h:167:31:constexpr float radians(float)	16	static
+math_inc.h:173:31:constexpr float degrees(float)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+ahrs.h:21:7:bool AHRS::is_initialed()	16	static
+ahrs.h:22:7:void AHRS::reset()	16	static
+ekf_baro.h:21:7:void EKF_Baro::reset()	16	static
+ekf_rangefinder.h:20:7:void EKF_Rangefinder::reset()	16	static
+ekf_odometry.h:19:7:void EKF_Odometry::reset()	16	static
+ekf_gnss.h:19:7:void EKF_GNSS::reset()	16	static
+motors.h:118:14:void Motors::set_desired_spool_state(Motors::spool_up_down_desired)	16	static
+motors.h:121:25:bool Motors::get_armed() const	16	static
+motors.h:125:25:void Motors::set_interlock(bool)	16	static
+motors.h:128:25:bool Motors::get_interlock() const	16	static
+motors.h:156:25:float Motors::get_roll() const	16	static
+motors.h:157:25:float Motors::get_pitch() const	16	static
+motors.h:158:25:float Motors::get_yaw() const	16	static
+motors.h:159:25:float Motors::get_throttle() const	16	static
+motors.h:160:19:float Motors::get_throttle_hover() const	16	static
+motors.h:162:25:float Motors::get_throttle_max() const	16	static
+motors.h:163:25:float Motors::get_throttle_min() const	16	static
+pid.h:66:17:void PID::kP(float)	16	static
+pid.h:67:17:void PID::kI(float)	16	static
+pid.h:68:17:void PID::kD(float)	16	static
+pid.h:69:17:void PID::imax(float)	16	static
+pid.h:74:17:void PID::set_integrator(float)	16	static
+p.h:49:10:void P::operator()(float)	16	static
+p.h:53:11:void P::kP(float)	16	static
+attitude_multi.h:56:5:P& Attitude_Multi::get_angle_roll_p()	16	static
+attitude_multi.h:57:5:P& Attitude_Multi::get_angle_pitch_p()	16	static
+attitude_multi.h:58:5:P& Attitude_Multi::get_angle_yaw_p()	16	static
+attitude_multi.h:59:7:PID& Attitude_Multi::get_rate_roll_pid()	16	static
+attitude_multi.h:60:7:PID& Attitude_Multi::get_rate_pitch_pid()	16	static
+attitude_multi.h:61:7:PID& Attitude_Multi::get_rate_yaw_pid()	16	static
+attitude_multi.h:64:7:void Attitude_Multi::set_rotation_body_to_ned(Matrix3f)	24	static
+attitude_multi.h:163:11:Vector3f Attitude_Multi::get_att_target_euler_d() const	24	static
+attitude_multi.h:166:8:float Attitude_Multi::get_att_error_angle_deg() const	16	static
+attitude_multi.h:220:8:float Attitude_Multi::get_throttle_in() const	16	static
+attitude_multi.h:262:7:bool Attitude_Multi::is_throttle_mix_min() const	16	static
+attitude_multi.h:285:7:void Attitude_Multi::set_throttle_mix_min()	16	static
+attitude_multi.h:286:7:void Attitude_Multi::set_throttle_mix_man()	16	static
+attitude_multi.h:287:7:void Attitude_Multi::set_throttle_mix_max()	16	static
+pid_2d.h:60:17:void PID_2D::kP(Vector2f)	24	static
+pid_2d.h:61:17:void PID_2D::kI(Vector2f)	24	static
+pid_2d.h:62:17:void PID_2D::kD(Vector2f)	24	static
+pid_2d.h:63:17:void PID_2D::imax(float)	16	static
+position.h:123:10:void PosControl::set_alt_target_to_current_alt()	16	static
+position.h:196:21:const Vector3f& PosControl::get_pos_target() const	16	static
+position.h:208:21:const Vector3f& PosControl::get_desired_velocity()	16	static
+position.h:279:8:P& PosControl::get_pos_z_p()	16	static
+position.h:280:8:P& PosControl::get_vel_z_p()	16	static
+position.h:281:10:PID& PosControl::get_accel_z_pid()	16	static
+position.h:282:8:P& PosControl::get_pos_xy_p()	16	static
+position.h:283:13:PID_2D& PosControl::get_vel_xy_pid()	16	static
+position.h:286:21:const Vector3f& PosControl::get_vel_target() const	16	static
+position.h:287:21:const Vector3f& PosControl::get_accel_target() const	16	static
+compassCalibrator.h:54:10:void CompassCalibrator::set_orientation(Rotation, bool, bool, bool)	16	static
+accelCalibrator.h:80:29:accel_cal_status_t AccelCalibrator::get_status() const	16	static
+accelCalibrator.h:83:13:uint8_t AccelCalibrator::get_num_samples_collected() const	16	static
+flash.h:19:2:DataFlash::DataFlash()	16	static
+vector3.h:30:15:constexpr Vector3<T>::Vector3() [with T = float]	16	static
+common.h:298:9:constexpr parameter::acro_y_expo::acro_y_expo()	16	static
+common.h:308:9:constexpr parameter::acro_yaw_p::acro_yaw_p()	16	static
+common.h:318:9:constexpr parameter::throttle_midzone::throttle_midzone()	16	static
+common.h:328:9:constexpr parameter::pilot_speed_dn::pilot_speed_dn()	16	static
+common.h:338:9:constexpr parameter::pilot_speed_up::pilot_speed_up()	16	static
+common.h:348:9:constexpr parameter::rangefinder_gain::rangefinder_gain()	16	static
+common.h:359:9:constexpr parameter::angle_max::angle_max()	16	static
+common.h:371:9:constexpr parameter::pilot_accel_z::pilot_accel_z()	16	static
+common.h:382:9:constexpr parameter::pilot_takeoff_alt::pilot_takeoff_alt()	16	static
+common.h:393:9:constexpr parameter::_spool_up_time::_spool_up_time()	16	static
+common.h:404:9:constexpr parameter::throttle_filt::throttle_filt()	16	static
+common.h:413:9:constexpr parameter::accel_offsets::accel_offsets()	16	static
+common.h:422:9:constexpr parameter::accel_diagonals::accel_diagonals()	16	static
+common.h:431:9:constexpr parameter::accel_offdiagonals::accel_offdiagonals()	16	static
+common.h:441:9:constexpr parameter::mag_offsets::mag_offsets()	16	static
+common.h:450:9:constexpr parameter::mag_diagonals::mag_diagonals()	16	static
+common.h:459:9:constexpr parameter::mag_offdiagonals::mag_offdiagonals()	16	static
+common.h:465:9:constexpr parameter::angle_roll_p::angle_roll_p()	16	static
+common.h:471:9:constexpr parameter::angle_pitch_p::angle_pitch_p()	16	static
+common.h:477:9:constexpr parameter::angle_yaw_p::angle_yaw_p()	16	static
+common.h:483:9:constexpr parameter::rate_roll_pid::rate_roll_pid()	16	static
+common.h:493:9:constexpr parameter::rate_pitch_pid::rate_pitch_pid()	16	static
+common.h:503:9:constexpr parameter::rate_yaw_pid::rate_yaw_pid()	16	static
+common.h:513:9:constexpr parameter::pos_z_p::pos_z_p()	16	static
+common.h:519:9:constexpr parameter::vel_z_p::vel_z_p()	16	static
+common.h:525:9:constexpr parameter::accel_z_pid::accel_z_pid()	16	static
+common.h:535:9:constexpr parameter::pos_xy_p::pos_xy_p()	16	static
+common.h:541:9:constexpr parameter::vel_xy_pid::vel_xy_pid()	16	static
+common.h:552:9:constexpr parameter::robot_type::robot_type()	16	static
+common.h:558:9:constexpr parameter::motor_type::motor_type()	16	static
+common.h:564:9:constexpr parameter::update_t_hover_min::update_t_hover_min()	16	static
+common.h:570:9:constexpr parameter::update_t_hover_max::update_t_hover_max()	16	static
+common.h:575:2:constexpr parameter::parameter()	16	static
+maincontroller.cpp:89:7:float ahrs_pitch_rad()	4	static
+maincontroller.cpp:90:7:float ahrs_roll_rad()	4	static
+maincontroller.cpp:91:7:float ahrs_yaw_rad()	4	static
+maincontroller.cpp:92:7:float ahrs_pitch_deg()	4	static
+maincontroller.cpp:93:7:float ahrs_roll_deg()	4	static
+maincontroller.cpp:94:7:float ahrs_yaw_deg()	4	static
+maincontroller.cpp:95:7:float ahrs_cos_roll()	4	static
+maincontroller.cpp:96:7:float ahrs_sin_roll()	4	static
+maincontroller.cpp:97:7:float ahrs_cos_pitch()	4	static
+maincontroller.cpp:98:7:float ahrs_sin_pitch()	4	static
+maincontroller.cpp:99:7:float ahrs_cos_yaw()	4	static
+maincontroller.cpp:100:7:float ahrs_sin_yaw()	4	static
+maincontroller.cpp:102:17:const Vector3f& get_accel_correct()	4	static
+maincontroller.cpp:103:17:const Vector3f& get_gyro_correct()	4	static
+maincontroller.cpp:104:17:const Vector3f& get_mag_correct()	4	static
+maincontroller.cpp:105:17:const Vector3f& get_accel_filt()	4	static
+maincontroller.cpp:106:17:const Vector3f& get_gyro_filt()	4	static
+maincontroller.cpp:107:17:const Vector3f& get_mag_filt()	4	static
+maincontroller.cpp:109:17:const Vector3f& get_accel_ef()	4	static
+maincontroller.cpp:113:17:const Vector3f& get_gyro_ef()	4	static
+maincontroller.cpp:118:7:float get_vib_value()	4	static
+maincontroller.cpp:123:7:float get_vib_angle_z()	4	static
+maincontroller.cpp:127:7:float get_channel_roll_angle()	8	static
+maincontroller.cpp:128:7:float get_channel_pitch_angle()	8	static
+maincontroller.cpp:129:7:float get_channel_yaw_angle()	8	static
+maincontroller.cpp:131:7:float get_ned_pos_x()	4	static
+maincontroller.cpp:132:7:float get_ned_pos_y()	4	static
+maincontroller.cpp:133:7:float get_ned_pos_z()	4	static
+maincontroller.cpp:134:7:float get_ned_vel_x()	4	static
+maincontroller.cpp:135:7:float get_ned_vel_y()	4	static
+maincontroller.cpp:136:7:float get_ned_vel_z()	4	static
+maincontroller.cpp:137:7:float get_odom_x()	4	static
+maincontroller.cpp:138:7:float get_odom_y()	4	static
+maincontroller.cpp:139:7:float get_yaw_map()	4	static
+maincontroller.cpp:140:6:bool get_mav_yaw_state()	4	static
+maincontroller.cpp:141:6:bool get_gnss_location_state()	4	static
+maincontroller.cpp:143:7:float get_mav_x_target()	4	static
+maincontroller.cpp:144:7:float get_mav_y_target()	4	static
+maincontroller.cpp:145:7:float get_mav_vx_target()	4	static
+maincontroller.cpp:146:7:float get_mav_vy_target()	4	static
+maincontroller.cpp:148:6:void reset_dataflash()	8	static
+maincontroller.cpp:152:6:void update_dataflash()	40	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+maincontroller.cpp:248:6:void get_tfmini_data(uint8_t)	32	static
+maincontroller.cpp:314:6:void parse_mavlink_data(mavlink_channel_t, uint8_t, mavlink_message_t*, mavlink_status_t*)	192	static
+maincontroller.cpp:785:6:void get_mavlink_data(mavlink_channel_t, uint8_t*, uint32_t)	32	static
+maincontroller.cpp:794:6:void send_mavlink_heartbeat_data()	296	static
+maincontroller.cpp:828:6:void send_mavlink_commond_ack(mavlink_channel_t, MAV_CMD, MAV_CMD_ACK)	304	static
+maincontroller.cpp:837:6:void send_mavlink_data(mavlink_channel_t)	24	static
+maincontroller.cpp:900:6:void send_mavlink_param_list(mavlink_channel_t)	16	static
+maincontroller.cpp:1046:6:void ekf_z_reset()	8	static
+maincontroller.cpp:1052:6:void ekf_xy_reset()	16	static
+maincontroller.cpp:1058:6:void motors_init()	16	static
+maincontroller.cpp:1096:6:void attitude_init()	40	static
+maincontroller.cpp:1108:6:void pos_init()	64	static
+maincontroller.cpp:1120:6:void update_accel_gyro_data()	176	static
+maincontroller.cpp:1181:13:bool accel_calibrate()	48	static
+maincontroller.cpp:1241:6:bool gyro_calibrate()	200	static
+maincontroller.cpp:1320:6:void update_mag_data()	112	static
+maincontroller.cpp:1353:6:void compass_calibrate()	24	static
+maincontroller.cpp:1378:6:void ahrs_update()	72	static
+maincontroller.cpp:1417:6:void update_baro_alt()	16	static
+maincontroller.cpp:1443:7:float get_baroalt_filt()	4	static
+maincontroller.cpp:1447:7:float get_baro_temp()	4	static
+maincontroller.cpp:1451:6:void ekf_baro_alt()	8	static
+maincontroller.cpp:1458:6:void ekf_rf_alt()	8	static
+maincontroller.cpp:1465:6:void gnss_update()	48	static
+maincontroller.cpp:1486:6:void ekf_odom_xy()	8	static
+maincontroller.cpp:1493:6:void ekf_gnss_xy()	8	static
+maincontroller.cpp:1500:7:float get_pos_x()	4	static
+maincontroller.cpp:1504:7:float get_pos_y()	4	static
+maincontroller.cpp:1508:7:float get_pos_z()	4	static
+maincontroller.cpp:1512:7:float get_vel_x()	4	static
+maincontroller.cpp:1516:7:float get_vel_y()	4	static
+maincontroller.cpp:1520:7:float get_vel_z()	4	static
+maincontroller.cpp:1527:7:float get_pilot_desired_yaw_rate(float)	40	static
+maincontroller.cpp:1567:6:void set_manual_throttle(bool)	16	static
+maincontroller.cpp:1569:6:bool has_manual_throttle()	4	static
+maincontroller.cpp:1573:6:void update_throttle_hover()	16	static
+maincontroller.cpp:1596:6:void set_throttle_takeoff()	8	static
+maincontroller.cpp:1602:7:float get_throttle_mid()	24	static
+maincontroller.cpp:1611:7:float get_pilot_desired_throttle(float, float)	40	static
+maincontroller.cpp:1647:7:float get_pilot_desired_climb_rate(float)	40	static
+maincontroller.cpp:1676:7:float get_non_takeoff_throttle()	8	static
+maincontroller.cpp:1684:7:float get_surface_tracking_climb_rate(float, float, float)	48	static
+maincontroller.cpp:1749:7:float get_rangefinder_alt()	4	static
+maincontroller.cpp:1754:7:float get_rangefinder_alt_target()	4	static
+maincontroller.cpp:1760:6:void set_accel_throttle_I_from_pilot_throttle()	24	static
+maincontroller.cpp:1770:6:void get_pilot_desired_lean_angles(float&, float&, float, float)	48	static
+maincontroller.cpp:1798:6:bool takeoff_running()	4	static
+maincontroller.cpp:1801:6:void takeoff_start(float)	24	static
+maincontroller.cpp:1818:6:bool takeoff_triggered(float)	16	static
+maincontroller.cpp:1832:6:void takeoff_stop()	4	static
+maincontroller.cpp:1842:6:void get_takeoff_climb_rates(float&, float&)	40	static
+maincontroller.cpp:1900:6:void set_land_complete(bool)	16	static
+maincontroller.cpp:1905:6:void rate_controller_run()	8	static
+maincontroller.cpp:1911:6:bool arm_motors()	8	static
+maincontroller.cpp:1945:6:void disarm_motors()	8	static
+maincontroller.cpp:1967:6:void unlock_motors()	8	static
+maincontroller.cpp:1984:6:void lock_motors()	8	static
+maincontroller.cpp:1996:6:void motors_output()	8	static
+maincontroller.cpp:2005:6:void update_land_detector()	24	static
+maincontroller.cpp:2067:6:void update_throttle_thr_mix()	48	static
+maincontroller.cpp:2110:6:void throttle_loop()	8	static
+maincontroller.cpp:2119:6:void arm_motors_check()	16	static
+maincontroller.cpp:2173:6:void set_throttle_zero_flag(float)	24	static
+maincontroller.cpp:2193:6:void lock_motors_check()	16	static
+maincontroller.cpp:2211:6:void zero_throttle_and_relax_ac()	8	static
+maincontroller.cpp:2230:6:void parse_comm0_data(uint8_t)	16	static
+maincontroller.cpp:2234:6:void parse_comm1_data(uint8_t)	16	static
+maincontroller.cpp:2238:6:void parse_comm2_data(uint8_t)	16	static
+maincontroller.cpp:2242:6:void parse_comm3_data(uint8_t)	16	static
+maincontroller.cpp:2246:6:void parse_comm4_data(uint8_t)	16	static
+maincontroller.cpp:2256:6:void Logger_Cat_Callback()	32	static
+maincontroller.cpp:2296:6:void Logger_Data_Callback()	112	static
+maincontroller.cpp:2330:6:void Logger_Update()	8	static
+maincontroller.cpp:2337:6:void debug()	4	static
+vector2.h:22:15:constexpr Vector2<T>::Vector2(T, T) [with T = float]	24	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
+vector3.h:142:10:void Vector3<T>::zero() [with T = float]	16	static
+math_inc.h:199:7:) [with T = float; U = float; Params = {}]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+math_inc.h:189:7:) [with T = float; Params = {float}]	24	static
+maincontroller.cpp:2391:1:void __static_initialization_and_destruction_0(int, int)	24	static
+maincontroller.cpp:2391:1:cpp)	8	static

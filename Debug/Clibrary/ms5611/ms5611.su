@@ -1,0 +1,12 @@
+ms5611.c:45:13:MS5611_Reset	16	static
+ms5611.c:53:17:read_prom_reg	40	static
+ms5611.c:72:17:crc4	24	static
+ms5611.c:97:13:read_prom	24	static
+ms5611.c:129:6:MS5611_Init	8	static
+ms5611.c:141:6:MS5611_Enable_Press_Conv	16	static
+ms5611.c:150:6:MS5611_Enable_Temp_Conv	16	static
+ms5611.c:158:17:Baro_Read_Data	32	static
+ms5611.c:173:6:MS5611_GetD1	8	static
+ms5611.c:179:6:MS5611_GetD2	8	static
+ms5611.c:185:14:Baro_Cal_Pressure	136	static
+ms5611.c:224:6:MS5611_Get_Data	88	static

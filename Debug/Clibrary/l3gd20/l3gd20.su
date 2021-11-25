@@ -1,0 +1,5 @@
+l3gd20.c:120:16:L3GD20_Spi_Com	32	static
+l3gd20.c:136:16:read_reg	32	static
+l3gd20.c:151:13:disable_i2c	16	static
+l3gd20.c:171:6:L3GD20_Init	8	static
+l3gd20.c:189:6:L3GD20_Get_Data	40	static

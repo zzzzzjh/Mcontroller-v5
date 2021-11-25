@@ -1,0 +1,15 @@
+cmath:584:3:constexpr bool std::isinf(float)	16	static
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+matrix_alg.cpp:21:8:float* mat_mul(float*, float*, uint8_t)	32	static
+matrix_alg.cpp:36:9:double* mat_mul(double*, double*, uint8_t)	48	static
+matrix_alg.cpp:62:8:float* mat_mul(float*, float*, uint8_t, uint8_t, uint8_t)	32	static
+matrix_alg.cpp:77:20:void swap(float&, float&)	24	static
+matrix_alg.cpp:94:13:void mat_pivot(float*, float*, uint8_t)	32	static
+matrix_alg.cpp:126:13:void mat_forward_sub(float*, float*, uint8_t)	40	static
+matrix_alg.cpp:148:13:void mat_back_sub(float*, float*, uint8_t)	40	static
+matrix_alg.cpp:171:13:void mat_LU_decompose(float*, float*, float*, float*, uint8_t)	40	static
+matrix_alg.cpp:211:13:bool mat_inverse(float*, float*, uint8_t)	64	static
+matrix_alg.cpp:263:6:bool inverse3x3(float*, float*)	64	static
+matrix_alg.cpp:302:6:bool inverse4x4(float*, float*)	88	static
+matrix_alg.cpp:440:6:bool inverse(float*, float*, uint16_t)	24	static
+math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static

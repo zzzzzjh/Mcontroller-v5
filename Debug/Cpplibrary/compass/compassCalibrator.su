@@ -1,0 +1,49 @@
+cmath:611:3:constexpr bool std::isnan(float)	16	static
+math_inc.h:146:14:float constrain_float(float, float, float)	24	static
+math_inc.h:151:16:int16_t constrain_int16(int16_t, int16_t, int16_t)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+compassCalibrator.h:79:16:float* CompassCalibrator::param_t::get_sphere_params()	16	static
+compassCalibrator.h:83:16:float* CompassCalibrator::param_t::get_ellipsoid_params()	16	static
+compassCalibrator.h:77:11:CompassCalibrator::param_t::param_t()	16	static
+compassCalibrator.cpp:58:1:CompassCalibrator::CompassCalibrator()	16	static
+compassCalibrator.cpp:65:6:void CompassCalibrator::clear()	16	static
+compassCalibrator.cpp:69:6:void CompassCalibrator::start(bool, float, uint16_t, uint8_t)	24	static
+compassCalibrator.cpp:83:6:void CompassCalibrator::get_calibration(Vector3f&, Vector3f&, Vector3f&)	24	static
+compassCalibrator.cpp:93:7:float CompassCalibrator::get_completion_percent() const	16	static
+compassCalibrator.cpp:113:6:void CompassCalibrator::update_completion_mask(const Vector3f&)	120	static
+compassCalibrator.cpp:128:6:void CompassCalibrator::update_completion_mask()	32	static
+compassCalibrator.cpp:136:39:uint8_t (& CompassCalibrator::get_completion_mask())[10]	16	static
+compassCalibrator.cpp:141:6:bool CompassCalibrator::check_for_timeout()	24	static
+compassCalibrator.cpp:151:6:void CompassCalibrator::new_sample(const Vector3f&)	16	static
+compassCalibrator.cpp:166:6:void CompassCalibrator::update(bool&)	16	static
+compassCalibrator.cpp:208:6:bool CompassCalibrator::running() const	16	static
+compassCalibrator.cpp:212:6:bool CompassCalibrator::fitting() const	16	static
+compassCalibrator.cpp:216:6:void CompassCalibrator::initialize_fit()	16	static
+compassCalibrator.cpp:229:6:void CompassCalibrator::reset_state()	32	static
+compassCalibrator.cpp:241:6:bool CompassCalibrator::set_status(compass_cal_status_t)	16	static
+compassCalibrator.cpp:337:6:bool CompassCalibrator::fit_acceptable()	40	static
+compassCalibrator.cpp:355:6:void CompassCalibrator::thin_samples()	32	static
+compassCalibrator.cpp:397:6:bool CompassCalibrator::accept_sample(const Vector3f&)	56	static
+compassCalibrator.cpp:418:6:bool CompassCalibrator::accept_sample(const CompassCalibrator::CompassSample&)	32	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
+compassCalibrator.cpp:422:7:float CompassCalibrator::calc_residual(const Vector3f&, const CompassCalibrator::param_t&) const	136	static
+compassCalibrator.cpp:431:7:float CompassCalibrator::calc_mean_squared_residuals() const	16	static
+compassCalibrator.cpp:436:7:float CompassCalibrator::calc_mean_squared_residuals(const CompassCalibrator::param_t&) const	40	static
+compassCalibrator.cpp:451:6:void CompassCalibrator::calc_sphere_jacob(const Vector3f&, const CompassCalibrator::param_t&, float*) const	152	static
+compassCalibrator.cpp:474:6:void CompassCalibrator::calc_initial_offset()	40	static
+compassCalibrator.cpp:484:6:void CompassCalibrator::run_sphere_fit()	312	static
+compassCalibrator.cpp:566:6:void CompassCalibrator::calc_ellipsoid_jacob(const Vector3f&, const CompassCalibrator::param_t&, float*) const	152	static
+compassCalibrator.cpp:595:6:void CompassCalibrator::run_ellipsoid_fit()	872	static
+compassCalibrator.cpp:686:10:Vector3f CompassCalibrator::CompassSample::get() const	16	static
+compassCalibrator.cpp:692:6:void CompassCalibrator::CompassSample::set(const Vector3f&)	16	static
+compassCalibrator.cpp:699:6:void CompassCalibrator::AttitudeSample::set_from_ahrs()	16	static
+vector3.h:30:15:constexpr Vector3<T>::Vector3() [with T = float]	16	static
+compassCalibrator.cpp:705:10:Matrix3f CompassCalibrator::AttitudeSample::get_rotmat()	32	static
+compassCalibrator.cpp:726:10:Vector3f CompassCalibrator::calculate_earth_field(CompassCalibrator::CompassSample&, Rotation)	88	static
+compassCalibrator.cpp:758:6:bool CompassCalibrator::calculate_orientation()	312	static
+vector3.h:142:10:void Vector3<T>::zero() [with T = float]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+vector3.h:127:8:T Vector3<T>::length_squared() const [with T = float]	16	static
+compassCalibrator.cpp:873:1:void __static_initialization_and_destruction_0(int, int)	16	static
+compassCalibrator.cpp:873:1:cpp)	8	static

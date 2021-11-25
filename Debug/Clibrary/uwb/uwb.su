@@ -1,0 +1,13 @@
+uwb.c:145:6:uwb_init	16	static
+uwb.c:195:6:uwb_update	104	static
+uwb.c:688:6:dwt_dumpregisters	48	static
+uwb.c:794:6:Anchor_Array_Init	16	static
+uwb.c:803:6:Semaphore_Init	16	static
+uwb.c:812:5:Sum_Tag_Semaphore_request	16	static
+uwb.c:824:6:Tag_Measure_Dis	40	static
+uwb.c:977:13:distance_mange	16	static
+uwb.c:1009:13:compute_angle_send_to_anchor0	32	static
+uwb.c:1126:17:get_tx_timestamp_u64	40	static
+uwb.c:1150:17:get_rx_timestamp_u64	40	static
+uwb.c:1175:13:final_msg_get_ts	24	static
+uwb.c:1195:13:final_msg_set_ts	32	static

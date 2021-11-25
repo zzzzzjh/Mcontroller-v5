@@ -1,0 +1,11 @@
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+sdlog.cpp:9:1:SDLog::SDLog()	16	static
+sdlog.cpp:14:9:FRESULT SDLog::Open_Log_File()	24	static
+sdlog.cpp:45:6:void SDLog::Close_Log_File()	16	static
+sdlog.cpp:52:6:void SDLog::Log_To_File(SDLog::Log_Type)	16	static
+sdlog.cpp:71:6:void SDLog::Logger_Update()	16	static
+sdlog.cpp:103:6:void SDLog::Logger_Enable()	16	static
+sdlog.cpp:108:6:void SDLog::Logger_Disable()	16	static
+sdlog.cpp:115:6:)	20	static
+sdlog.cpp:120:1:void __static_initialization_and_destruction_0(int, int)	16	static
+sdlog.cpp:120:1:cpp)	8	static

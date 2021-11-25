@@ -1,0 +1,11 @@
+quaternion.h:21:5:Quaternion::Quaternion()	16	static
+quaternion.h:115:13:float& Quaternion::operator[](uint8_t)	24	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+ahrs.cpp:14:1:AHRS::AHRS(float)	24	static
+ahrs.cpp:19:6:void AHRS::update(bool, bool)	592	static
+ahrs.cpp:205:6:void AHRS::check_vibration()	24	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+vector3.h:30:15:constexpr Vector3<T>::Vector3() [with T = float]	16	static
+vector3.h:136:10:void Vector3<T>::normalize() [with T = float]	16	static
+ahrs.cpp:254:1:void __static_initialization_and_destruction_0(int, int)	16	static
+ahrs.cpp:254:1:cpp)	8	static

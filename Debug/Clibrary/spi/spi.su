@@ -1,0 +1,9 @@
+spi.c:22:6:Set_SPI_Mode	24	static
+spi.c:33:6:Set_SPI_NS_Pin	16	static
+spi.c:37:19:SPI_Transmit_Delayms	24	static
+spi.c:41:19:SPI_Receive_Delayms	24	static
+spi.c:45:19:SPI_TransmitReceive_Delayms	32	static
+spi.c:49:19:SPI_Transmit_IT	16	static
+spi.c:53:19:SPI_Receive_IT	16	static
+spi.c:57:19:SPI_TransmitReceive_IT	24	static
+spi.c:61:22:SPI_GetState	8	static

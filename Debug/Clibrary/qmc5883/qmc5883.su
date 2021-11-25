@@ -1,0 +1,2 @@
+qmc5883.c:30:6:MAG_Init	32	static
+qmc5883.c:48:6:MAG_Get_Data	16	static

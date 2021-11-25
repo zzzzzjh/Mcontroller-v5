@@ -1,0 +1,76 @@
+quaternion.h:21:5:Quaternion::Quaternion()	16	static
+quaternion.h:28:5:Quaternion::Quaternion(float, float, float, float)	24	static
+math_inc.h:146:14:float constrain_float(float, float, float)	24	static
+math_inc.h:167:31:constexpr float radians(float)	16	static
+common.h:283:8:<unnamed struct>::<constructor>()	16	static
+motors.h:141:25:void Motors::set_roll(float)	16	static
+motors.h:142:25:void Motors::set_pitch(float)	16	static
+motors.h:143:25:void Motors::set_yaw(float)	16	static
+motors.h:145:25:void Motors::set_throttle_avg_max(float)	16	static
+motors.h:160:19:float Motors::get_throttle_hover() const	16	static
+motors.h:162:25:float Motors::get_throttle_max() const	16	static
+pid.h:57:14:float PID::kP()	16	static
+pid.h:59:14:float PID::kD()	16	static
+pid.h:73:17:float PID::get_integrator() const	16	static
+p.h:29:5:P::P(const float&)	16	static
+p.h:52:17:const float P::kP() const	16	static
+attitude_multi.h:59:7:PID& Attitude_Multi::get_rate_roll_pid()	16	static
+attitude_multi.h:60:7:PID& Attitude_Multi::get_rate_pitch_pid()	16	static
+attitude_multi.h:61:7:PID& Attitude_Multi::get_rate_yaw_pid()	16	static
+attitude_multi.h:66:11:Matrix3f Attitude_Multi::get_rotation_target_to_ned()	16	static
+attitude_multi.h:75:8:float Attitude_Multi::get_accel_roll_max_radss() const	16	static
+attitude_multi.h:85:8:float Attitude_Multi::get_accel_pitch_max_radss() const	16	static
+attitude_multi.h:95:8:float Attitude_Multi::get_accel_yaw_max_radss() const	16	static
+attitude_multi.h:310:8:float Attitude_Multi::get_roll_trim_rad()	16	static
+attitude_multi.h:313:8:float Attitude_Multi::get_slew_yaw_rads()	16	static
+attitude_multi.cpp:10:1:Attitude_Multi::Attitude_Multi(Motors&, Vector3f&, float)	136	static
+attitude_multi.cpp:50:6:void Attitude_Multi::update_althold_lean_angle_max(float)	24	static
+attitude_multi.cpp:65:6:void Attitude_Multi::set_throttle_out(float, bool, float)	32	static
+attitude_multi.cpp:83:7:float Attitude_Multi::get_throttle_boosted(float)	40	static
+attitude_multi.cpp:102:7:float Attitude_Multi::get_throttle_avg_max(float)	24	static
+attitude_multi.cpp:109:6:void Attitude_Multi::update_throttle_rpy_mix()	16	static
+attitude_multi.cpp:122:6:void Attitude_Multi::rate_controller_run()	80	static
+attitude_multi.cpp:140:6:void Attitude_Multi::set_throttle_out_unstabilized(float, bool, float)	24	static
+attitude_multi.cpp:152:6:void Attitude_Multi::relax_attitude_controllers()	208	static
+attitude_multi.cpp:171:6:void Attitude_Multi::reset_rate_controller_I_terms()	16	static
+vector3.h:30:15:constexpr Vector3<T>::Vector3() [with T = float]	16	static
+attitude_multi.cpp:203:6:void Attitude_Multi::input_quaternion(Quaternion)	112	static
+attitude_multi.cpp:237:6:void Attitude_Multi::input_euler_angle_roll_pitch_euler_rate_yaw(float, float, float)	120	static
+attitude_multi.cpp:288:6:void Attitude_Multi::input_euler_angle_roll_pitch_yaw(float, float, float, bool)	128	static
+attitude_multi.cpp:346:6:void Attitude_Multi::input_euler_rate_roll_pitch_yaw(float, float, float)	120	static
+attitude_multi.cpp:388:6:void Attitude_Multi::input_rate_bf_roll_pitch_yaw(float, float, float)	112	static
+attitude_multi.cpp:425:6:void Attitude_Multi::input_rate_bf_roll_pitch_yaw_2(float, float, float)	80	static
+attitude_multi.cpp:448:6:void Attitude_Multi::input_rate_bf_roll_pitch_yaw_3(float, float, float)	208	static
+attitude_multi.cpp:494:6:void Attitude_Multi::input_angle_step_bf_roll_pitch_yaw(float, float, float)	112	static
+attitude_multi.cpp:519:6:void Attitude_Multi::attitude_controller_run_quat()	320	static
+matrix3.h:38:15:constexpr Matrix3<T>::Matrix3() [with T = float]	16	static
+attitude_multi.cpp:578:6:void Attitude_Multi::thrust_heading_rotation_angles(Quaternion&, const Quaternion&, Vector3f&, float&)	360	static
+attitude_multi.cpp:635:7:static float Attitude_Multi::input_shaping_angle(float, float, float, float, float)	32	static
+attitude_multi.cpp:645:7:static float Attitude_Multi::input_shaping_ang_vel(float, float, float, float)	32	static
+vector3.h:36:15:constexpr Vector3<T>::Vector3(T, T, T) [with T = float]	24	static
+attitude_multi.cpp:658:6:void Attitude_Multi::input_shaping_rate_predictor(Vector2f, Vector2f&, float) const	56	static
+vector2.h:22:15:constexpr Vector2<T>::Vector2(T, T) [with T = float]	24	static
+attitude_multi.cpp:677:6:void Attitude_Multi::ang_vel_limit(Vector3f&, float, float, float) const	40	static
+attitude_multi.cpp:700:10:Vector3f Attitude_Multi::euler_accel_limit(Vector3f, Vector3f)	32	static
+attitude_multi.cpp:720:6:void Attitude_Multi::shift_ef_yaw_target(float)	72	static
+attitude_multi.cpp:729:6:void Attitude_Multi::inertial_frame_reset()	96	static
+attitude_multi.cpp:744:6:void Attitude_Multi::euler_rate_to_ang_vel(const Vector3f&, const Vector3f&, Vector3f&)	40	static
+attitude_multi.cpp:758:6:bool Attitude_Multi::ang_vel_to_euler_rate(const Vector3f&, const Vector3f&, Vector3f&)	40	static
+attitude_multi.cpp:777:10:Vector3f Attitude_Multi::update_ang_vel_target_from_att_error(Vector3f)	40	static
+attitude_multi.cpp:807:7:float Attitude_Multi::rate_target_to_motor_roll(float, float)	48	static
+attitude_multi.cpp:829:7:float Attitude_Multi::rate_target_to_motor_pitch(float, float)	48	static
+attitude_multi.cpp:851:7:float Attitude_Multi::rate_target_to_motor_yaw(float, float)	48	static
+attitude_multi.cpp:873:6:void Attitude_Multi::accel_limiting(bool)	16	static
+attitude_multi.cpp:894:7:float Attitude_Multi::get_althold_lean_angle_max() const	16	static
+attitude_multi.cpp:901:7:static float Attitude_Multi::sqrt_controller(float, float, float, float)	32	static
+attitude_multi.cpp:936:7:static float Attitude_Multi::stopping_point(float, float, float)	48	static
+attitude_multi.cpp:964:7:float Attitude_Multi::max_rate_step_bf_roll()	32	static
+attitude_multi.cpp:972:7:float Attitude_Multi::max_rate_step_bf_pitch()	32	static
+attitude_multi.cpp:980:7:float Attitude_Multi::max_rate_step_bf_yaw()	32	static
+matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
+math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static
+math_inc.h:55:13:bool is_positive(T) [with T = float]	16	static
+math_inc.h:64:13:bool is_negative(T) [with T = float]	16	static
+math_inc.h:179:7:float sq(T) [with T = float]	16	static
+attitude_multi.cpp:985:1:void __static_initialization_and_destruction_0(int, int)	16	static
+attitude_multi.cpp:985:1:cpp)	8	static

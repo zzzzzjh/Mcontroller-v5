@@ -1,0 +1,10 @@
+spl06.c:112:9:spl06_write_reg	32	static
+spl06.c:126:9:spl06_read_reg	32	static
+spl06.c:141:6:spl06_start	16	static
+spl06.c:146:6:spl06_config_pressure	24	static
+spl06.c:184:6:spl06_config_temperature	24	static
+spl06.c:223:9:BARO_Init	40	static
+spl06.c:287:6:spl06_get_pressure_adc	16	static
+spl06.c:304:6:spl06_get_temperature_adc	16	static
+spl06.c:320:6:spl06_update_data	104	static
+spl06.c:369:6:BARO_Get_Date	8	static

@@ -1,0 +1,12 @@
+ms5607.c:45:13:MS5607_Reset	16	static
+ms5607.c:53:17:read_prom_reg	40	static
+ms5607.c:72:17:crc4	24	static
+ms5607.c:97:13:read_prom	24	static
+ms5607.c:129:6:MS5607_Init	8	static
+ms5607.c:141:6:MS5607_Enable_Press_Conv	16	static
+ms5607.c:149:6:MS5607_Enable_Temp_Conv	16	static
+ms5607.c:157:17:Baro_Read_Data	32	static
+ms5607.c:172:6:MS5607_GetD1	8	static
+ms5607.c:178:6:MS5607_GetD2	8	static
+ms5607.c:184:14:Baro_Cal_Pressure	144	static
+ms5607.c:219:6:MS5607_Get_Data	88	static

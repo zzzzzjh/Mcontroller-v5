@@ -1,0 +1,17 @@
+channel.c:16:14:get_alpha	16	static
+channel.c:22:6:set_channel_roll	24	static
+channel.c:26:6:set_channel_pitch	24	static
+channel.c:30:6:set_channel_yaw	24	static
+channel.c:34:6:set_channel_throttle	24	static
+channel.c:38:6:set_channel_5	24	static
+channel.c:41:6:set_channel_6	24	static
+channel.c:44:6:set_channel_7	24	static
+channel.c:47:6:set_channel_8	24	static
+channel.c:51:7:get_channel_roll	4	static
+channel.c:52:7:get_channel_pitch	4	static
+channel.c:53:7:get_channel_yaw	4	static
+channel.c:54:7:get_channel_throttle	4	static
+channel.c:55:7:get_channel_5	4	static
+channel.c:56:7:get_channel_6	4	static
+channel.c:57:7:get_channel_7	4	static
+channel.c:58:7:get_channel_8	4	static

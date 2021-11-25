@@ -1,0 +1,5 @@
+buzzer.c:11:6:Buzzer_Set_Output_Disable	8	static
+buzzer.c:17:6:Buzzer_set_Output_freq	24	static
+buzzer.c:31:6:Buzzer_Set_Output_Enable	8	static
+buzzer.c:35:6:Buzzer_set_ring_type	16	static
+buzzer.c:39:6:Buzzer_ring	8	static

@@ -1,0 +1,6 @@
+fram.c:30:13:FRAM_Spi_Com	24	static
+fram.c:39:13:FRAM_Set_Status	24	static
+fram.c:50:9:FRAM_Get_Status	24	static
+fram.c:64:6:FRAM_Init	8	static
+fram.c:72:6:FRAM_Write_Data	48	dynamic
+fram.c:90:6:FRAM_Read_Data	64	dynamic
