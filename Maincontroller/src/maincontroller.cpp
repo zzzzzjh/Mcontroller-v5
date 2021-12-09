@@ -2015,7 +2015,7 @@ void update_land_detector(void)
 		preland_detector_count=2000;
 	}
 	float deadband_bottom = get_throttle_mid() - param->throttle_midzone.value;
-	if((preland_detector_count<100)&&(get_channel_throttle()<deadband_bottom)&&(get_vib_value()>5.0)&&(!motors->limit.throttle_lower)){//认为落地了,锁定电机防止弹起来
+	if((preland_detector_count<100)&&(get_channel_throttle()<deadband_bottom)&&(get_vib_value()>GRAVITY_MSS)&&(!motors->limit.throttle_lower)){//降落时撞击地面,锁定电机防止弹起来
 		disarm_motors();
 	}
 	//******************落地后ls*********************
@@ -2354,8 +2354,9 @@ void debug(void){
 //	usb_printf("temp:%f\n",spl06_data.temp);
 //	usb_printf("alt:%f\n",get_alt_target());
 //	float cos_tilt = ahrs_cos_pitch() * ahrs_cos_roll();
-//	usb_printf("pitch:%f|roll:%f|yaw:%f,Z:%f\n", pitch_deg, roll_deg, yaw_deg, get_accel_ef().z);
-//	usb_printf("v:%f,v5:%f\n",get_batt_volt(),get_5v_in());
+//	usb_printf("pitch:%f|roll:%f|yaw:%f,X:%f|Y:%f|Z:%f, %f\n", pitch_deg, roll_deg, yaw_deg,get_accel_ef().x,get_accel_ef().y, get_accel_ef().z, get_mag_filt().length());
+//	usb_printf("l:%f\n",cos_tilt);
+	//	usb_printf("v:%f,v5:%f\n",get_batt_volt(),get_5v_in());
 //	usb_printf("gx:%f|gy:%f|gz:%f\n", gyro_filt.x, gyro_filt.y, gyro_filt.z);
 //	usb_printf("mx:%f|my:%f|mz:%f\n", mag_filt.x, mag_filt.y, mag_filt.z);
 //	usb_printf("x:%f,y:%f,z:%f\n",gyro_offset.x,gyro_offset.y,gyro_offset.z);
@@ -2372,9 +2373,9 @@ void debug(void){
 //	s2_printf("pitch:%f|roll:%f|yaw:%f\n", pitch_deg, roll_deg, yaw_deg);
 //	s2_printf("yaw:%f\n", yaw_map);
 //	s2_printf("x:%f,y:%f\n", x_target, y_target);
-//	usb_printf("pos_z:%f|%f|%f\n",get_pos_z(),get_vel_z(),accel_ef.z);
+//	usb_printf("pos_z:%f|%f|%f|%f\n",baro_alt_filt,get_pos_z(),get_vel_z(),accel_ef.z);
 //	usb_printf("ax:%f\n",param.accel_offdiagonals.value.x);
-//	usb_printf("baro_alt_filt:%f\n",baro_alt_filt);
+//	usb_printf("t:%f\n",motors->get_throttle());
 //	usb_printf("r:%f,p:%f,y:%f,t:%f,5:%f,6:%f,7:%f,8:%f\n",get_channel_roll(),get_channel_pitch(),get_channel_yaw(), get_channel_throttle(),get_channel_5(),get_channel_6(),get_channel_7(),get_channel_8());
 //	usb_printf("0:%f,1:%f,4:%f,5:%f\n",motors->get_thrust_rpyt_out(0),motors->get_thrust_rpyt_out(1),motors->get_thrust_rpyt_out(4), motors->get_thrust_rpyt_out(5));
 //	usb_printf("roll:%f,pitch:%f,yaw:%f,throttle:%f\n",motors->get_roll(),motors->get_pitch(),motors->get_yaw(), motors->get_throttle());

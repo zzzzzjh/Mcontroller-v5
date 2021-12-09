@@ -52,7 +52,7 @@ RingBuffer ringbuffer_usb, ringbuffer_comm1, ringbuffer_comm2, ringbuffer_comm3,
 RingBuffer ringbuffer_usb_send, ringbuffer_comm1_send, ringbuffer_comm2_send, ringbuffer_comm3_send, ringbuffer_comm4_send;
 static uint8_t *TxBuffer_comm0, *TxBuffer_comm1, *TxBuffer_comm2, *TxBuffer_comm3, *TxBuffer_comm4;//串口transmit buffer
 static uint8_t *RxBuffer_comm0, *RxBuffer_comm1, *RxBuffer_comm2, *RxBuffer_comm3, *RxBuffer_comm4;//串口receive buffer
-static bool initialed=false;
+static bool initialed_task=false;
 /* USER CODE END Variables */
 /* Definitions for initTask */
 osThreadId_t initTaskHandle;
@@ -128,7 +128,7 @@ const osThreadAttr_t gpsTask_attributes = {
 osThreadId_t uwbTaskHandle;
 const osThreadAttr_t uwbTask_attributes = {
   .name = "uwbTask",
-  .stack_size = 400 * 4,
+  .stack_size = 500 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 
@@ -301,14 +301,15 @@ void InitTask(void *argument)
   gyro_calibrate();
   attitude_init();
   pos_init();
-  if(mode_althold_init()){
+  uwb_init(tag);
+  if(mode_stabilize_init()){
 	  usb_printf("System initialized succeed!\r\n");
 	  Buzzer_set_ring_type(BUZZER_INITIALED);
-	  initialed=true;//当初始化未完成时，只运行buzzer task
+	  initialed_task=true;//当初始化未完成时，只运行buzzer task
   }else{
 	  usb_printf("System initialized failed!\r\n");
 	  Buzzer_set_ring_type(BUZZER_ERROR);
-	  initialed=false;
+	  initialed_task=false;
   }
   osThreadTerminate(initTaskHandle);//终结线程，并回收内存
   /* USER CODE END InitTask */
@@ -324,7 +325,7 @@ void InitTask(void *argument)
 void Loop200hzTask(void *argument)
 {
   /* USER CODE BEGIN Loop200hzTask */
-  while(!initialed);
+  while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -346,7 +347,7 @@ void Loop200hzTask(void *argument)
 void HeartBeatTask(void *argument)
 {
   /* USER CODE BEGIN HeartBeatTask */
-  while(!initialed);
+  while(!initialed_task);
   const TickType_t TimeIncrement= pdMS_TO_TICKS(1000); // 1s
   TickType_t PreviousWakeTime=xTaskGetTickCount();
   /* Infinite loop */
@@ -372,7 +373,7 @@ void Loop400hzTask(void *argument)
 {
   /* USER CODE BEGIN Loop400hzTask */
   /* Infinite loop */
-	while(!initialed);
+	while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -390,7 +391,7 @@ void Loop400hzTask(void *argument)
 //	  ekf_rf_alt();
 //	  ekf_odom_xy();
 	  ekf_gnss_xy();
-	  mode_althold();
+	  mode_stabilize();
 	  rate_controller_run();
 	  update_land_detector();
 	  motors_output();
@@ -408,7 +409,7 @@ void Loop400hzTask(void *argument)
 void Loop100hzTask(void *argument)
 {
   /* USER CODE BEGIN Loop100hzTask */
-	while(!initialed);
+	while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -455,7 +456,7 @@ void BuzzerTask(void *argument)
 void MavSendTask(void *argument)
 {
   /* USER CODE BEGIN MavSendTask */
-	while(!initialed);
+	while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -474,7 +475,7 @@ void MavSendTask(void *argument)
 void Loop50hzTask(void *argument)
 {
   /* USER CODE BEGIN Loop50hzTask */
-	while(!initialed);
+	while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -496,7 +497,7 @@ void Loop50hzTask(void *argument)
 void SDLogTask(void *argument)
 {
   /* USER CODE BEGIN SDLogTask */
-	while(!initialed);
+	while(!initialed_task);
   /* Infinite loop */
   for(;;)
   {
@@ -515,7 +516,7 @@ void SDLogTask(void *argument)
 void GPSTask(void *argument)
 {
   /* USER CODE BEGIN GPSTask */
-	while(!initialed);
+	while(!initialed_task);
 #if USE_GPS==0
 	osThreadTerminate(gpsTaskHandle);
 #endif
@@ -549,11 +550,10 @@ void GPSTask(void *argument)
 void UWBTask(void *argument)
 {
   /* USER CODE BEGIN UWBTask */
-	while(!initialed);
+	while(!initialed_task);
 #if USE_UWB==0
 	osThreadTerminate(uwbTaskHandle);
 #endif
-	uwb_init(tag);
 	uint8_t state_flag=0;
   /* Infinite loop */
 	for(;;)
@@ -578,7 +578,7 @@ void UWBTask(void *argument)
 /// Add new thread application below
 /// (5) define task function that step(3) declared
 void TestTask(void *argument){
-	while(!initialed);
+	while(!initialed_task);
 //	TaskStatus_t taskstatus;		// NOTED: add codes that don't need to loop
 	for(;;)							// NOTED: if codes need to loop, must add into for(;;){} or while(1){} or some other looper.
 	{
@@ -587,6 +587,10 @@ void TestTask(void *argument){
 //	  usb_printf("freeHeapSize:%d, freeStackSize:%d\n", xPortGetFreeHeapSize(),taskstatus.usStackHighWaterMark);
 	  osDelay(10);
 	}
+}
+
+bool get_task_initialed(void){
+	return initialed_task;
 }
 
 //*************TIM Callback**************//
@@ -641,4 +645,3 @@ void gpio8_interrupt_callback(void){
 
 /* USER CODE END Application */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

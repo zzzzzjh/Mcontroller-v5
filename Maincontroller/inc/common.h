@@ -144,8 +144,8 @@
 
 #define GYRO_INIT_MAX_DIFF_DPS 0.1f
 
-#define THR_HOVER_UPDATE_MIN 0.4f
-#define THR_HOVER_UPDATE_MAX 0.6f
+#define THR_HOVER_UPDATE_MIN 0.3f
+#define THR_HOVER_UPDATE_MAX 0.7f
 
 // spool definition
 // time (in seconds) for throttle to increase from zero to min throttle, and min throttle to full throttle.
@@ -404,7 +404,7 @@ typedef struct{
 	struct throttle_filt{
 		uint16_t num=10;
 		dataflash_type type=FLOAT;
-		float value=0.05f;
+		float value=0.1f;
 	}throttle_filt;
 
 	// @DisplayName: accel_offset

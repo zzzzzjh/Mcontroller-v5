@@ -14,9 +14,9 @@
 #include "uwb/deca_regs.h"
 #include "uwb/trilateration.h"
 
-#define TAG_ID 0x01
-#define MASTER_TAG 0x00
-#define MAX_SLAVE_TAG 45
+#define TAG_ID 0xFE
+#define MASTER_TAG 0xFE
+#define MAX_SLAVE_TAG 0x01
 #define SLAVE_TAG_START_INDEX 0x01
 
 #define ANCHOR_MAX_NUM 4
@@ -26,6 +26,18 @@ typedef enum{
 	tag=1,
 	anchor
 }uwb_mode;
+
+typedef enum UWB_state{
+	idle=0,
+	poll,
+	resp,
+	final,
+	dis,
+	release,
+	release_confirm,
+	release_wait,
+	statistics
+}UWB_state;
 
 void uwb_init(uwb_mode uwb_mode);
 void uwb_update(uwb_mode uwb_mode);

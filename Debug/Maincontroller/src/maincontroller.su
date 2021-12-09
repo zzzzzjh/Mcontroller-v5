@@ -245,12 +245,12 @@ maincontroller.cpp:2246:6:void parse_comm4_data(uint8_t)	16	static
 maincontroller.cpp:2256:6:void Logger_Cat_Callback()	32	static
 maincontroller.cpp:2296:6:void Logger_Data_Callback()	112	static
 maincontroller.cpp:2330:6:void Logger_Update()	8	static
-maincontroller.cpp:2337:6:void debug()	4	static
+maincontroller.cpp:2337:6:void debug()	24	static
 vector2.h:22:15:constexpr Vector2<T>::Vector2(T, T) [with T = float]	24	static
 matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
 vector3.h:142:10:void Vector3<T>::zero() [with T = float]	16	static
 math_inc.h:199:7:) [with T = float; U = float; Params = {}]	16	static
 math_inc.h:179:7:float sq(T) [with T = float]	16	static
 math_inc.h:189:7:) [with T = float; Params = {float}]	24	static
-maincontroller.cpp:2391:1:void __static_initialization_and_destruction_0(int, int)	24	static
-maincontroller.cpp:2391:1:cpp)	8	static
+maincontroller.cpp:2392:1:void __static_initialization_and_destruction_0(int, int)	24	static
+maincontroller.cpp:2392:1:cpp)	8	static

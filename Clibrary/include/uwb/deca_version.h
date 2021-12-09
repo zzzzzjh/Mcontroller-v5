@@ -15,6 +15,7 @@
 
 #include "hal.h"
 
+
 //
 // The DW1000 device driver is separately version numbered to any version the application using it may have
 //
@@ -28,7 +29,7 @@
 // Quantity AA is updated for major changes that will need user code changes
 //
 
-#define DW1000_DRIVER_VERSION               0x030001
-#define DW1000_DEVICE_DRIVER_VER_STRING     "DW1000 Device Driver Version 03.00.01"
+#define DW1000_DRIVER_VERSION               0x050100
+#define DW1000_DEVICE_DRIVER_VER_STRING     "DW1000 Device Driver Version 05.01.00"
 
 #endif

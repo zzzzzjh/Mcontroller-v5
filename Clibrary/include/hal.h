@@ -225,6 +225,8 @@ void parse_comm4_data(uint8_t data);
 void debug(void);
 /****************c/c++ interface*******************************/
 
+bool get_task_initialed(void);
+
 void comm_callback(void);
 void COMM1_Callback(void);//串口1中断回调函数
 void COMM2_Callback(void);//串口2中断回调函数
@@ -288,7 +290,7 @@ HAL_I2C_StateTypeDef I2C_GetState(void);
  *  		SPI_FIRSTBIT_MSB / SPI_FIRSTBIT_LSB
  *  Prescaler: 波特率分频,SPI时钟频率=84/X Mhz,
  *  		SPI_BAUDRATEPRESCALER_X (X=2/4/8/16/32/64/128/256)
- *  CPol: 高电平有效或低电平有效
+ *  CPol: 空闲时刻的时钟电平
  *  		SPI_POLARITY_LOW / SPI_POLARITY_HIGH
  *  CPha: 时钟触发边沿，第一边或第二边
  *  		SPI_PHASE_1EDGE / SPI_PHASE_2EDGE
@@ -510,6 +512,7 @@ void FMU_PWM_Set_Output_Disable(void);//调用这个函数之后电机、舵机P
 /**********************配置gpio口模式***************************
  * @param  mode:
  * 				GPIO_MODE_OUTPUT_PP(推挽输出模式);
+ * 				GPIO_MODE_OUTPUT_OD(开漏输出模式);
  * 				GPIO_MODE_INPUT(输入模式);
  * 				GPIO_MODE_IT_RISING(中断模式|上升沿触发);
  *				GPIO_MODE_IT_FALLING(中断模式|下降沿触发);

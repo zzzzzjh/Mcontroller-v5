@@ -335,5 +335,3 @@ void send_usb_data(uint8_t* buf, uint16_t len)
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

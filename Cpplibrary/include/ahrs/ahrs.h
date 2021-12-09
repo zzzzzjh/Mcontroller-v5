@@ -53,7 +53,7 @@ private:
 						0, 1, 0,
 						0, 0, 1};
 
-	float ekf_gain=0.005;
+	float ekf_gain=0.01;
 
 	Vector3f accel_average, accel_variance;
 	Vector3f accel_array[var_length];
