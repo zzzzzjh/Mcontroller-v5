@@ -14,15 +14,16 @@
 class EKF_Rangefinder{
 
 public:
-	EKF_Rangefinder(float dt);
-	void update(bool &get_rangefinder_data);
+	EKF_Rangefinder(float dt, float Q, float R1, float R2);
+	void update(bool &get_rangefinder_data, float rangefinder_alt);
 	bool is_initialed(void){return initialed;}
 	void reset(void){
 		initialed=false;
 	}
 	float pos_z=0, vel_z=0;
-	float Qt=1.0f; //观测数据的方差
+
 private:
+	float Qt=1.0f; //观测数据的方差
 	bool initialed=false;
 	float _filt_alpha(float dt, float filt_hz);
 	float _alpha=0;
@@ -37,8 +38,8 @@ private:
 	float HT_rf[2*1]={1,0};
 	float Rt_rf[2*2]={ 0.000016,          0, 	//预测数据x方差
 						0,              0.16}; 	//预测数据v方差
-	float error_rf[2*2]={ 0.000016,       0,
-						0,              0.16};
+	float error_rf[2*2]={ 1.0,       0,
+						  0,         1.0};
 	float error_p_rf[2*2];
 	float* error1_rf;
 	float* error2_rf;

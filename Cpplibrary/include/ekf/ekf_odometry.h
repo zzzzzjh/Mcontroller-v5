@@ -13,16 +13,16 @@
 
 class EKF_Odometry{
 public:
-	EKF_Odometry(float dt);
-	void update(bool &get_odometry);
+	EKF_Odometry(float dt, float Q1, float Q2, float R1, float R2, float R3, float R4);
+	void update(bool &get_odometry, float odom_pos_x, float odom_pos_y);
 	bool is_initialed(void){return initialed;}
 	void reset(void){
 		initialed=false;
 	}
 	float pos_x=0, pos_y=0, vel_x=0, vel_y=0;
-	float Qt[2]={1.0f,1.0f}; //观测数据的方差
-private:
 
+private:
+	float Qt[2]={1.0f,1.0f}; //观测数据的方差
 	float T_odom=0.0025; //2.5ms
 	bool initialed=false;
 	/*****************x-axis******************/
@@ -36,8 +36,8 @@ private:
 	float HT_odomx[2*1]={1,0};
 	float Rt_odomx[2*2]={ 0.0025,   0, 		//预测数据x方差
 						  0,        2.5};   //预测数据v方差
-	float error_odomx[2*2]={ 0.0025,0,
-						     0,     2.5};
+	float error_odomx[2*2]={ 1.0,   0,
+						     0,     1.0};
 	float error_p_odomx[2*2];
 	float* error1_odomx;
 	float* error2_odomx;
@@ -54,8 +54,8 @@ private:
 	float HT_odomy[2*1]={1,0};
 	float Rt_odomy[2*2]={ 0.0025,   0, 		//预测数据x方差
 						  0,        2.5}; 	//预测数据v方差
-	float error_odomy[2*2]={ 0.0025,  0,
-						     0,       2.5};
+	float error_odomy[2*2]={ 1.0,     0,
+						     0,       1.0};
 	float error_p_odomy[2*2];
 	float* error1_odomy;
 	float* error2_odomy;

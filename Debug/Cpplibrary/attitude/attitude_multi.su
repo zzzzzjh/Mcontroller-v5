@@ -2,7 +2,7 @@ quaternion.h:21:5:Quaternion::Quaternion()	16	static
 quaternion.h:28:5:Quaternion::Quaternion(float, float, float, float)	24	static
 math_inc.h:146:14:float constrain_float(float, float, float)	24	static
 math_inc.h:167:31:constexpr float radians(float)	16	static
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 motors.h:141:25:void Motors::set_roll(float)	16	static
 motors.h:142:25:void Motors::set_pitch(float)	16	static
 motors.h:143:25:void Motors::set_yaw(float)	16	static

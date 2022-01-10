@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/icm20608/icm20608.c 
 
-OBJS += \
-./Clibrary/icm20608/icm20608.o 
-
 C_DEPS += \
 ./Clibrary/icm20608/icm20608.d 
+
+OBJS += \
+./Clibrary/icm20608/icm20608.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

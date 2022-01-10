@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/serial/serial.c 
 
-OBJS += \
-./Clibrary/serial/serial.o 
-
 C_DEPS += \
 ./Clibrary/serial/serial.d 
+
+OBJS += \
+./Clibrary/serial/serial.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

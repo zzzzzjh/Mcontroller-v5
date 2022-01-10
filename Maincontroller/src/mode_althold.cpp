@@ -111,8 +111,14 @@ void mode_althold(void){
 		attitude->input_euler_angle_roll_pitch_yaw(target_roll, target_pitch, target_yaw, true);
 
 		// surface tracking that adjust climb rate using rangefinder
-//		target_climb_rate = get_surface_tracking_climb_rate(target_climb_rate, pos_control->get_alt_target(), _dt);
+		target_climb_rate = get_surface_tracking_climb_rate(target_climb_rate, pos_control->get_alt_target(), _dt);
 
+		if((!rangefinder_state.alt_healthy)&&((target_climb_rate+param->pilot_speed_dn.value)<10)){//cms
+			//油门拉到最低时强制油门下降 注意：该功能只在surface tracking无效时使用
+			set_thr_force_decrease(true);
+		}else{
+			set_thr_force_decrease(false);
+		}
 		// call position controller
 		pos_control->set_alt_target_from_climb_rate_ff(target_climb_rate, _dt, false);
 

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/qmc5883/qmc5883.c 
 
-OBJS += \
-./Clibrary/qmc5883/qmc5883.o 
-
 C_DEPS += \
 ./Clibrary/qmc5883/qmc5883.d 
+
+OBJS += \
+./Clibrary/qmc5883/qmc5883.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

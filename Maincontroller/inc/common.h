@@ -17,52 +17,52 @@
 ////////////////////////
 // Stabilize  Control //
 ////////////////////////
-#define AC_ATTITUDE_CONTROL_ANGLE_ROLL_P                      4.5f             // default angle P gain for roll 4.5f
-#define AC_ATTITUDE_CONTROL_ANGLE_PITCH_P                     4.5f             // default angle P gain for pitch 4.5f
-#define AC_ATTITUDE_CONTROL_ANGLE_YAW_P                       4.5f             // default angle P gain for yaw 4.5f
+#define AC_ATTITUDE_CONTROL_ANGLE_ROLL_P                      4.0f             // default angle P gain for roll 4.5f
+#define AC_ATTITUDE_CONTROL_ANGLE_PITCH_P                     4.0f             // default angle P gain for pitch 4.5f
+#define AC_ATTITUDE_CONTROL_ANGLE_YAW_P                       4.0f             // default angle P gain for yaw 4.5f
 
 // default rate controller PID gains
 #ifndef AC_ATC_MULTI_RATE_PITCH_P
-  # define AC_ATC_MULTI_RATE_PITCH_P          0.135f //0.135
+  # define AC_ATC_MULTI_RATE_PITCH_P          0.06f //0.135
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_PITCH_I
-  # define AC_ATC_MULTI_RATE_PITCH_I          0.135f //0.072
+  # define AC_ATC_MULTI_RATE_PITCH_I          0.04f //0.135
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_PITCH_D
-  # define AC_ATC_MULTI_RATE_PITCH_D          0.0036f //0.0036
+  # define AC_ATC_MULTI_RATE_PITCH_D          0.001f //0.0036
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_ROLL_P
-  # define AC_ATC_MULTI_RATE_ROLL_P           0.135f//0.135
+  # define AC_ATC_MULTI_RATE_ROLL_P           0.06f//0.135
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_ROLL_I
-  # define AC_ATC_MULTI_RATE_ROLL_I           0.135f //0.072
+  # define AC_ATC_MULTI_RATE_ROLL_I           0.04f //0.135
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_ROLL_D
-  # define AC_ATC_MULTI_RATE_ROLL_D           0.0036f//0.0036
+  # define AC_ATC_MULTI_RATE_ROLL_D           0.001f//0.0036
 #endif
 
 #ifndef AC_ATC_MULTI_RATE_RP_IMAX
- # define AC_ATC_MULTI_RATE_RP_IMAX         0.5f
+ # define AC_ATC_MULTI_RATE_RP_IMAX         0.3f
 #endif
 #ifndef AC_ATC_MULTI_RATE_RP_FILT_HZ
  # define AC_ATC_MULTI_RATE_RP_FILT_HZ      20.0f
 #endif
 #ifndef AC_ATC_MULTI_RATE_YAW_P
- # define AC_ATC_MULTI_RATE_YAW_P           0.18f //0.18
+ # define AC_ATC_MULTI_RATE_YAW_P           0.16f //0.18
 #endif
 #ifndef AC_ATC_MULTI_RATE_YAW_I
- # define AC_ATC_MULTI_RATE_YAW_I           0.018f //0.015
+ # define AC_ATC_MULTI_RATE_YAW_I           0.016f //0.018
 #endif
 #ifndef AC_ATC_MULTI_RATE_YAW_D
  # define AC_ATC_MULTI_RATE_YAW_D           0.0f
 #endif
 #ifndef AC_ATC_MULTI_RATE_YAW_IMAX
- # define AC_ATC_MULTI_RATE_YAW_IMAX        0.5f
+ # define AC_ATC_MULTI_RATE_YAW_IMAX        0.3f
 #endif
 #ifndef AC_ATC_MULTI_RATE_YAW_FILT_HZ
  # define AC_ATC_MULTI_RATE_YAW_FILT_HZ     2.5f
@@ -72,9 +72,9 @@
 #define POSCONTROL_POS_Z_P                    1.0f    // vertical position controller P gain default
 #define POSCONTROL_VEL_Z_P                    5.0f    // vertical velocity controller P gain default
 #define POSCONTROL_ACC_Z_P                    0.5f    // vertical acceleration controller P gain default
-#define POSCONTROL_ACC_Z_I                    0.5f     // vertical acceleration controller I gain default
+#define POSCONTROL_ACC_Z_I                    0.25f     // vertical acceleration controller I gain default
 #define POSCONTROL_ACC_Z_D                    0.0f    // vertical acceleration controller D gain default
-#define POSCONTROL_ACC_Z_IMAX                 500     // vertical acceleration controller IMAX gain default
+#define POSCONTROL_ACC_Z_IMAX                 300     // vertical acceleration controller IMAX gain default
 #define POSCONTROL_ACC_Z_FILT_HZ              20.0f   // vertical acceleration controller input filter default
 #define POSCONTROL_ACC_Z_DT                   0.0025f // vertical acceleration controller dt default
 #define POSCONTROL_POS_XY_P                   0.3f    // horizontal position controller P gain default
@@ -127,7 +127,7 @@
 #endif
 
 #ifndef PILOT_TKOFF_ALT_DEFAULT
- # define PILOT_TKOFF_ALT_DEFAULT           0     // default final alt above home for pilot initiated takeoff
+ # define PILOT_TKOFF_ALT_DEFAULT           100     // default final alt above home for pilot initiated takeoff
 #endif
 
 #ifndef LAND_RANGEFINDER_MIN_ALT_CM
@@ -150,6 +150,7 @@
 // spool definition
 // time (in seconds) for throttle to increase from zero to min throttle, and min throttle to full throttle.
 #define MOTORS_SPOOL_UP_TIME_DEFAULT 0.5f
+#define VIB_LAND_THR 6.0f
 
 bool arm_motors(void);
 void disarm_motors(void);
@@ -157,6 +158,8 @@ void lock_motors(void);
 void unlock_motors(void);
 bool get_soft_armed(void);
 void set_soft_armed(bool soft_armed);
+bool get_thr_force_decrease(void);
+void set_thr_force_decrease(bool force_decrease);
 void compass_calibrate(void);
 
 float ahrs_pitch_rad(void);					//俯仰角弧度值
@@ -572,6 +575,13 @@ typedef struct{
 		dataflash_type type=FLOAT;
 		float value=THR_HOVER_UPDATE_MAX;
 	}t_hover_update_max;
+
+	struct vib_land{
+		uint16_t num=32;
+		dataflash_type type=FLOAT;
+		float value=VIB_LAND_THR;
+	}vib_land;
+
 }parameter;
 
 extern parameter *param;

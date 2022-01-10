@@ -1,6 +1,6 @@
 cmath:584:3:constexpr bool std::isinf(float)	16	static
 cmath:611:3:constexpr bool std::isnan(float)	16	static
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 accelCalibrator.h:105:9:AccelCalibrator::param_u::param_u()	16	static
 accelCalibrator.cpp:18:1:AccelCalibrator::AccelCalibrator()	16	static
 accelCalibrator.cpp:42:6:void AccelCalibrator::start(accel_cal_fit_type_t, uint8_t, float)	120	static

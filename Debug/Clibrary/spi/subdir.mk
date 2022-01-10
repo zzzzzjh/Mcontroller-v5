@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/spi/spi.c 
 
-OBJS += \
-./Clibrary/spi/spi.o 
-
 C_DEPS += \
 ./Clibrary/spi/spi.d 
+
+OBJS += \
+./Clibrary/spi/spi.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

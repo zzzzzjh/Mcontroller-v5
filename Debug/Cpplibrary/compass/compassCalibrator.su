@@ -1,7 +1,7 @@
 cmath:611:3:constexpr bool std::isnan(float)	16	static
 math_inc.h:146:14:float constrain_float(float, float, float)	24	static
 math_inc.h:151:16:int16_t constrain_int16(int16_t, int16_t, int16_t)	16	static
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 compassCalibrator.h:79:16:float* CompassCalibrator::param_t::get_sphere_params()	16	static
 compassCalibrator.h:83:16:float* CompassCalibrator::param_t::get_ellipsoid_params()	16	static
 compassCalibrator.h:77:11:CompassCalibrator::param_t::param_t()	16	static

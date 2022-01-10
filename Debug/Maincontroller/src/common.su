@@ -1,5 +1,7 @@
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
-common.cpp:11:6:bool get_soft_armed()	4	static
-common.cpp:15:6:void set_soft_armed(bool)	16	static
-common.cpp:17:1:void __static_initialization_and_destruction_0(int, int)	16	static
-common.cpp:17:1:cpp)	8	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
+common.cpp:12:6:bool get_soft_armed()	4	static
+common.cpp:16:6:void set_soft_armed(bool)	16	static
+common.cpp:20:6:bool get_thr_force_decrease()	4	static
+common.cpp:24:6:void set_thr_force_decrease(bool)	16	static
+common.cpp:26:1:void __static_initialization_and_destruction_0(int, int)	16	static
+common.cpp:26:1:cpp)	8	static

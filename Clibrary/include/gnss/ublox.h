@@ -568,7 +568,7 @@ extern "C" {
 
 	typedef uint64_t gps_abstime;
 
-  int configure(uint32_t *baudrate, OutputMode output_mode,uint64_t timeout);
+bool configure(uint32_t *baudrate, OutputMode output_mode,uint64_t timeout);
 
 #ifdef __cplusplus
 }

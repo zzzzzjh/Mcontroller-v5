@@ -95,7 +95,7 @@ extern "C" {
 
 	extern vehicle_gps_position_s *gps_position;
 	extern bool gps_healthy;//gps是否正常
-	void GPS_Init(void);
+	bool GPS_Init(void);
 	void GPS_Baud_Reset(uint32_t baud);
 	void get_gps_data(uint8_t buf);
 	bool get_gps_state(void);

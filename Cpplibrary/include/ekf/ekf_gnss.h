@@ -13,16 +13,16 @@
 
 class EKF_GNSS{
 public:
-	EKF_GNSS(float dt);
-	void update(bool &get_odometry);
+	EKF_GNSS(float dt, float Q1, float Q2, float R1, float R2, float R3, float R4);
+	void update(bool &get_gnss, float gnss_pos_x, float gnss_pos_y, float gnss_vel_x, float gnss_vel_y);
 	bool is_initialed(void){return initialed;}
 	void reset(void){
 		initialed=false;
 	}
 	float pos_x=0, pos_y=0, vel_x=0, vel_y=0;
-	float Qt[2]={1.0f,1.0f};//观测数据的方差
-private:
 
+private:
+	float Qt[2]={1.0f,1.0f};//观测数据的方差
 	float T_odom=0.0025; //2.5ms
 	bool initialed=false;
 	/*****************x-axis******************/
@@ -41,8 +41,8 @@ private:
 						  0,        0.001}; 	//预测数据v方差
 	float error_xv_x[2*2]={1,0,
 			 	 	 	   0,1};
-	float error_odomx[2*2]={ 0.0000001,0,
-						     0,     0.001};
+	float error_odomx[2*2]={ 1.0,   0,
+						     0,     1.0};
 	float error_p_odomx[2*2];
 	float* error1_odomx;
 	float* error2_odomx;
@@ -65,8 +65,8 @@ private:
 						  0,        0.001}; //预测数据v方差
 	float error_xv_y[2*2]={1,0,
 				 	 	   0,1};
-	float error_odomy[2*2]={ 0.0000001,  0,
-						     0,       0.001};
+	float error_odomy[2*2]={ 1.0,  0,
+						     0,    1.0};
 	float error_p_odomy[2*2];
 	float* error1_odomy;
 	float* error2_odomy;

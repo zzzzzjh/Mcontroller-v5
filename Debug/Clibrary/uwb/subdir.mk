@@ -12,14 +12,6 @@ C_SRCS += \
 ../Clibrary/uwb/trilateration.c \
 ../Clibrary/uwb/uwb.c 
 
-OBJS += \
-./Clibrary/uwb/deca_device.o \
-./Clibrary/uwb/deca_params_init.o \
-./Clibrary/uwb/deca_range_tables.o \
-./Clibrary/uwb/deca_spi.o \
-./Clibrary/uwb/trilateration.o \
-./Clibrary/uwb/uwb.o 
-
 C_DEPS += \
 ./Clibrary/uwb/deca_device.d \
 ./Clibrary/uwb/deca_params_init.d \
@@ -27,6 +19,14 @@ C_DEPS += \
 ./Clibrary/uwb/deca_spi.d \
 ./Clibrary/uwb/trilateration.d \
 ./Clibrary/uwb/uwb.d 
+
+OBJS += \
+./Clibrary/uwb/deca_device.o \
+./Clibrary/uwb/deca_params_init.o \
+./Clibrary/uwb/deca_range_tables.o \
+./Clibrary/uwb/deca_spi.o \
+./Clibrary/uwb/trilateration.o \
+./Clibrary/uwb/uwb.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

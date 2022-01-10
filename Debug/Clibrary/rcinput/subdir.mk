@@ -8,13 +8,13 @@ C_SRCS += \
 ../Clibrary/rcinput/channel.c \
 ../Clibrary/rcinput/rcinput.c 
 
-OBJS += \
-./Clibrary/rcinput/channel.o \
-./Clibrary/rcinput/rcinput.o 
-
 C_DEPS += \
 ./Clibrary/rcinput/channel.d \
 ./Clibrary/rcinput/rcinput.d 
+
+OBJS += \
+./Clibrary/rcinput/channel.o \
+./Clibrary/rcinput/rcinput.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

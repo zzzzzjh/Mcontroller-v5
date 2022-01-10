@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/lsm303d/lsm303d.c 
 
-OBJS += \
-./Clibrary/lsm303d/lsm303d.o 
-
 C_DEPS += \
 ./Clibrary/lsm303d/lsm303d.d 
+
+OBJS += \
+./Clibrary/lsm303d/lsm303d.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -91,7 +91,7 @@ MS5611_Data ms5611_data;
 SPL06_Data spl06_data;
 PWM_Channel pwm_channel;
 uint8_t HeartBeatFlags=0;
-uint32_t USB_Buffer_length=1024, URAT_DMA_Buffer_length=1024, RxBuffer_comm1_length, RxBuffer_comm2_length, RxBuffer_comm3_length, RxBuffer_comm4_length;
+uint32_t USB_Buffer_length=2048, URAT_DMA_Buffer_length=2048, RxBuffer_comm1_length, RxBuffer_comm2_length, RxBuffer_comm3_length, RxBuffer_comm4_length;
 uint8_t *RxBuffer_comm1_DMA, *RxBuffer_comm2_DMA, *RxBuffer_comm3_DMA, *RxBuffer_comm4_DMA;
 uint8_t *TxBuffer_comm0_buf, *TxBuffer_comm1_buf, *TxBuffer_comm2_buf, *TxBuffer_comm3_buf, *TxBuffer_comm4_buf;
 /* USER CODE END PV */

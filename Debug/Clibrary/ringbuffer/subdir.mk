@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/ringbuffer/ringbuffer.c 
 
-OBJS += \
-./Clibrary/ringbuffer/ringbuffer.o 
-
 C_DEPS += \
 ./Clibrary/ringbuffer/ringbuffer.d 
+
+OBJS += \
+./Clibrary/ringbuffer/ringbuffer.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

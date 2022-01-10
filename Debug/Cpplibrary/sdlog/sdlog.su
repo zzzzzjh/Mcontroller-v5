@@ -1,4 +1,4 @@
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 sdlog.cpp:9:1:SDLog::SDLog()	16	static
 sdlog.cpp:14:9:FRESULT SDLog::Open_Log_File()	24	static
 sdlog.cpp:45:6:void SDLog::Close_Log_File()	16	static

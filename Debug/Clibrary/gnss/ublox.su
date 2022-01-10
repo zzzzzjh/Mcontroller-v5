@@ -14,4 +14,4 @@ ublox.c:555:5:payloadRxDone	64	static
 ublox.c:814:9:ParseChar	24	static
 ublox.c:961:5:waitForAck	48	static
 ublox.c:996:9:configureMessageRateAndAck	16	static
-ublox.c:1005:5:configure	128	static
+ublox.c:1005:6:configure	128	static

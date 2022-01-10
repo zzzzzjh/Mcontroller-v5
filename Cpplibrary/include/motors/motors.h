@@ -216,9 +216,6 @@ protected:
 	float               _throttle_min;       				// min throttle output (0~1)
     float               _throttle_avg_max;                      // last throttle input from set_throttle_avg_max
 
-	uint16_t            _motor_pwm_max;
-	uint16_t            _motor_pwm_min;
-
 	// parameters
 	float               _yaw_headroom;          // yaw control is given at least this pwm range
 	float            	_thrust_curve_expo;     // curve used to linearize pwm to thrust conversion.  set to 0 for linear and 1 for second order approximation

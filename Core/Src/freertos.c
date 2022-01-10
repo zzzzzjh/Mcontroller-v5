@@ -301,8 +301,8 @@ void InitTask(void *argument)
   gyro_calibrate();
   attitude_init();
   pos_init();
-  uwb_init(tag);
-  if(mode_stabilize_init()){
+
+  if(mode_althold_init()){
 	  usb_printf("System initialized succeed!\r\n");
 	  Buzzer_set_ring_type(BUZZER_INITIALED);
 	  initialed_task=true;//当初始化未完成时，只运行buzzer task
@@ -390,10 +390,9 @@ void Loop400hzTask(void *argument)
 	  /***Do not change code above and change or add new code below***/
 //	  ekf_rf_alt();
 //	  ekf_odom_xy();
-	  ekf_gnss_xy();
-	  mode_stabilize();
+//	  ekf_gnss_xy();
+	  mode_althold();
 	  rate_controller_run();
-	  update_land_detector();
 	  motors_output();
   }
   /* USER CODE END Loop400hzTask */
@@ -424,6 +423,7 @@ void Loop100hzTask(void *argument)
 	  arm_motors_check();
 	  update_throttle_hover();
 	  throttle_loop();
+	  update_land_detector();
   }
   /* USER CODE END Loop100hzTask */
 }
@@ -520,7 +520,9 @@ void GPSTask(void *argument)
 #if USE_GPS==0
 	osThreadTerminate(gpsTaskHandle);
 #endif
-	GPS_Init(); // GPS_Init() task will block 10s
+	if(!GPS_Init()){// GPS_Init() task will block 10s
+		osThreadTerminate(gpsTaskHandle);
+	}
     uint8_t state_flag=0;
   /* Infinite loop */
   for(;;)
@@ -554,21 +556,13 @@ void UWBTask(void *argument)
 #if USE_UWB==0
 	osThreadTerminate(uwbTaskHandle);
 #endif
-	uint8_t state_flag=0;
+	if(!uwb_init(tag)){
+		osThreadTerminate(uwbTaskHandle);
+	}
   /* Infinite loop */
 	for(;;)
 	{
-		if(state_flag<50){
-		    FMU_LED6_Control(true);
-		}else{
-		    FMU_LED6_Control(false);
-		}
-		state_flag++;
-		if(state_flag>=100){
-		    state_flag=0;
-		}
 		uwb_update(tag);
-		osDelay(10);
 	}
   /* USER CODE END UWBTask */
 }

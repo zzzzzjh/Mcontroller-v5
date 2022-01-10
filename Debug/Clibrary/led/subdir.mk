@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/led/led.c 
 
-OBJS += \
-./Clibrary/led/led.o 
-
 C_DEPS += \
 ./Clibrary/led/led.d 
+
+OBJS += \
+./Clibrary/led/led.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

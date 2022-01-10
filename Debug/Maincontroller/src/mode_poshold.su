@@ -1,6 +1,6 @@
 math_inc.h:146:14:float constrain_float(float, float, float)	24	static
 math_inc.h:173:31:constexpr float degrees(float)	16	static
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 motors.h:118:14:void Motors::set_desired_spool_state(Motors::spool_up_down_desired)	16	static
 motors.h:121:25:bool Motors::get_armed() const	16	static
 attitude_multi.h:116:7:void Attitude_Multi::set_yaw_target_to_current_heading()	16	static

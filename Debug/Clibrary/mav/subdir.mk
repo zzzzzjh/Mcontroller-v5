@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/mav/mav.c 
 
-OBJS += \
-./Clibrary/mav/mav.o 
-
 C_DEPS += \
 ./Clibrary/mav/mav.d 
+
+OBJS += \
+./Clibrary/mav/mav.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

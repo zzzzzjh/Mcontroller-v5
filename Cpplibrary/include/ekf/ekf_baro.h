@@ -14,15 +14,16 @@
 class EKF_Baro{
 
 public:
-	EKF_Baro(float dt);
-	void update(bool &get_baro_alt_filt);
+	EKF_Baro(float dt, float Q, float R1, float R2);
+	void update(bool &get_baro_alt_filt, float baro_alt);
 	float pos_z=0, vel_z=0;
 	bool is_initialed(void){return initialed;}
 	void reset(void){
 		initialed=false;
 	}
-	float Qt=0.04f;//观测数据的方差
+
 private:
+	float Qt=0.0016f;//观测数据的方差
 	float _filt_alpha(float dt, float filt_hz);
 	float _alpha=0;
 	bool initialed=false;
@@ -35,15 +36,15 @@ private:
 	float h=0 ,error_x=0, zt=0;
 	float H[1*2]={1,0};
 	float HT[2*1]={1,0};
-	float Rt[2*2]={ 0.00000001,       0,	//预测数据x方差
-					0,          0.000001};	//预测数据v方差
-	float error[2*2]={  0.00000001,        0,
-					    0,           0.000001};
+	float Rt[2*2]={ 0.000016,       0,	//预测数据x方差
+					0,          0.000016};	//预测数据v方差
+	float error[2*2]={  1.0,        0,
+					    0,          1.0};
 	float error_p[2*2];
 	float* error1;
 	float* error2;
 	float* Kal;
-	float accelz_filt_hz=20;//Hz
+	float accelz_filt_hz=10;//Hz 震度对于速度预测影响非常大 所以要把截止频率设低一些
 	float accelz_filt=0;
 };
 #endif /* INCLUDE_EKF_EKF_BARO_H_ */

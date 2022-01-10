@@ -178,7 +178,7 @@ extern SPL06_Data spl06_data;
 extern MS5611_Data ms5611_data;
 extern PWM_Channel pwm_channel;
 extern ROBOT_STATE robot_state;
-
+extern Vector3_Float uwb_position;
 /****************c/c++ interface*******************************/
 void motors_init(void);
 void attitude_init(void);

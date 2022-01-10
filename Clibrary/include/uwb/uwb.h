@@ -9,6 +9,10 @@
 #ifndef INCLUDE_UWB_UWB_H_
 #define INCLUDE_UWB_UWB_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "hal.h"
 #include "uwb/deca_device_api.h"
 #include "uwb/deca_regs.h"
@@ -19,16 +23,17 @@
 #define MAX_SLAVE_TAG 0x01
 #define SLAVE_TAG_START_INDEX 0x01
 
-#define ANCHOR_MAX_NUM 4
-#define ANCHOR_IND 2  // 0 1 2 3
+#define ANCHOR_MAX_NUM 4 //3 4
+#define ANCHOR_IND 1  // 1 2 3 4
 
 typedef enum{
 	tag=1,
 	anchor
 }uwb_mode;
 
-typedef enum UWB_state{
+typedef enum{
 	idle=0,
+	receive,
 	poll,
 	resp,
 	final,
@@ -37,9 +42,13 @@ typedef enum UWB_state{
 	release_confirm,
 	release_wait,
 	statistics
-}UWB_state;
+}uwb_states;
 
-void uwb_init(uwb_mode uwb_mode);
+bool uwb_init(uwb_mode uwb_mode);
 void uwb_update(uwb_mode uwb_mode);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INCLUDE_UWB_UWB_H_ */

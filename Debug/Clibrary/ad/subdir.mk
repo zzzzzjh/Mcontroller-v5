@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/ad/ad.c 
 
-OBJS += \
-./Clibrary/ad/ad.o 
-
 C_DEPS += \
 ./Clibrary/ad/ad.d 
+
+OBJS += \
+./Clibrary/ad/ad.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

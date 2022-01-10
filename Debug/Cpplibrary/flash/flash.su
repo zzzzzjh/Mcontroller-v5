@@ -1,4 +1,4 @@
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 flash.cpp:9:6:void DataFlash::write_data(uint32_t, uint8_t*, uint8_t)	24	static
 flash.cpp:18:6:void DataFlash::read_data(uint32_t, uint8_t*, uint8_t)	24	static
 flash.cpp:27:6:void DataFlash::update_addr_num_max(uint16_t)	16	static

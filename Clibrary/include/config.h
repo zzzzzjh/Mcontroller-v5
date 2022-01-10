@@ -21,10 +21,18 @@
 
 #define PWM_SERVO_MIN 500   // 脉宽 500us
 #define PWM_SERVO_MAX 2500  // 脉宽 2500us
+
 #define PWM_ESC_MIN 1000	// 脉宽 1000us
 #define PWM_ESC_MAX 2000	// 脉宽 2000us
+#define PWM_ESC_SPIN_ARM 1100
+#define PWM_ESC_SPIN_MIN 1200
+#define PWM_ESC_SPIN_MAX 1850
+
 #define PWM_BRUSH_MIN 0		// 脉宽 0us
 #define PWM_BRUSH_MAX 2500	// 脉宽 2500us
+#define PWM_BRUSH_SPIN_ARM 50
+#define PWM_BRUSH_SPIN_MIN 100
+#define PWM_BRUSH_SPIN_MAX 2400
 
 /**************遥控信号输入**************/
 #define RC_INPUT_PPM	0   		//PPM信号

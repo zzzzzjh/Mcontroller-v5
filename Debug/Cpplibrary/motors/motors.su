@@ -1,6 +1,6 @@
 cmath:562:3:constexpr bool std::isfinite(float)	16	static
 math_inc.h:146:14:float constrain_float(float, float, float)	24	static
-common.h:283:8:<unnamed struct>::<constructor>()	16	static
+common.h:286:8:<unnamed struct>::<constructor>()	16	static
 motors.h:121:25:bool Motors::get_armed() const	16	static
 motors.h:159:25:float Motors::get_throttle() const	16	static
 motors.h:162:25:float Motors::get_throttle_max() const	16	static
@@ -13,13 +13,13 @@ motors.cpp:88:6:void Motors::update_throttle_hover(float)	24	static
 motors.cpp:97:6:void Motors::output_logic()	32	static
 motors.cpp:258:6:void Motors::add_motor(uint8_t, float, float, float)	24	static
 motors.cpp:276:6:void Motors::setup_motors(Motors::motor_frame_class, Motors::motor_frame_type, Motors::motor_pwm_type)	32	static
-motors.cpp:340:6:void Motors::normalise_rpy_factors()	32	static
-motors.cpp:379:6:void Motors::set_armed(bool)	16	static
-motors.cpp:386:6:void Motors::output_armed_stabilizing()	80	static
-motors.cpp:533:6:void Motors::output_to_motors()	24	static
-motors.cpp:550:6:void Motors::output_min_throttle()	24	static
-motors.cpp:559:6:void Motors::output()	16	static
-motors.cpp:573:6:void Motors::set_throttle_passthrough_for_motors(float)	24	static
+motors.cpp:346:6:void Motors::normalise_rpy_factors()	32	static
+motors.cpp:385:6:void Motors::set_armed(bool)	16	static
+motors.cpp:392:6:void Motors::output_armed_stabilizing()	80	static
+motors.cpp:539:6:void Motors::output_to_motors()	24	static
+motors.cpp:582:6:void Motors::output_min_throttle()	24	static
+motors.cpp:591:6:void Motors::output()	16	static
+motors.cpp:605:6:void Motors::set_throttle_passthrough_for_motors(float)	24	static
 math_inc.h:47:13:bool is_zero(T) [with T = float]	16	static
-motors.cpp:579:1:void __static_initialization_and_destruction_0(int, int)	16	static
-motors.cpp:579:1:cpp)	8	static
+motors.cpp:611:1:void __static_initialization_and_destruction_0(int, int)	16	static
+motors.cpp:611:1:cpp)	8	static

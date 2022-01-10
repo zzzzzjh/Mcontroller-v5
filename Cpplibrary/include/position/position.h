@@ -25,9 +25,9 @@
 
 #define POSCONTROL_SPEED                        50.0f  // default horizontal speed in cm/s
 #define POSCONTROL_SPEED_DOWN                  -100.0f  // default descent rate in cm/s
-#define POSCONTROL_SPEED_UP                     100.0f  // default climb rate in cm/s
+#define POSCONTROL_SPEED_UP                     200.0f  // default climb rate in cm/s
 
-#define POSCONTROL_ACCEL_Z                      100.0f  // default vertical acceleration in cm/s/s.
+#define POSCONTROL_ACCEL_Z                      50.0f  // default vertical acceleration in cm/s/s.
 
 #define POSCONTROL_LEASH_LENGTH_MIN             100.0f  // minimum leash lengths in cm
 

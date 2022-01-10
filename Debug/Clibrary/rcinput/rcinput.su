@@ -15,8 +15,8 @@ rcinput.c:344:13:override_rc_channels	24	static
 rcinput.c:352:6:RC_Input_Loop	24	static
 rcinput.c:388:10:input_channel_roll	4	static
 rcinput.c:389:10:input_channel_pitch	4	static
-rcinput.c:390:10:input_channel_yaw	4	static
-rcinput.c:391:10:input_channel_throttle	4	static
+rcinput.c:390:10:input_channel_throttle	4	static
+rcinput.c:391:10:input_channel_yaw	4	static
 rcinput.c:392:10:input_channel_5	4	static
 rcinput.c:393:10:input_channel_6	4	static
 rcinput.c:394:10:input_channel_7	4	static
