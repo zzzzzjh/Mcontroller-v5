@@ -18,3 +18,10 @@ OBJS += \
 Core/Startup/%.o: ../Core/Startup/%.s Core/Startup/subdir.mk
 	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"  -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -o "$@" "$<"
 
+clean: clean-Core-2f-Startup
+
+clean-Core-2f-Startup:
+	-$(RM) ./Core/Startup/startup_stm32f427vitx.d ./Core/Startup/startup_stm32f427vitx.o
+
+.PHONY: clean-Core-2f-Startup
+
