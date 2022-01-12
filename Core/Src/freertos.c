@@ -389,7 +389,7 @@ void Loop400hzTask(void *argument)
 	  MPU_CS_H;
 	  /***Do not change code above and change or add new code below***/
 //	  ekf_rf_alt();
-//	  ekf_odom_xy();
+	  ekf_odom_xy();
 //	  ekf_gnss_xy();
 	  mode_althold();
 	  rate_controller_run();
@@ -559,7 +559,10 @@ void UWBTask(void *argument)
 	if(!uwb_init(tag)){
 		osThreadTerminate(uwbTaskHandle);
 	}
-  /* Infinite loop */
+	set_anchor_positon(1, 0, 0, 0);
+	set_anchor_positon(2, 0, 160, 0);
+	set_anchor_positon(3, 160, 160, 0);
+	set_anchor_positon(4, 160, 0, 0);
 	for(;;)
 	{
 		uwb_update(tag);

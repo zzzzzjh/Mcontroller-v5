@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/spl06/spl06.c 
 
-C_DEPS += \
-./Clibrary/spl06/spl06.d 
-
 OBJS += \
 ./Clibrary/spl06/spl06.o 
+
+C_DEPS += \
+./Clibrary/spl06/spl06.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

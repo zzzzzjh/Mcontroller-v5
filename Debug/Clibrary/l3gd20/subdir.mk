@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/l3gd20/l3gd20.c 
 
-C_DEPS += \
-./Clibrary/l3gd20/l3gd20.d 
-
 OBJS += \
 ./Clibrary/l3gd20/l3gd20.o 
+
+C_DEPS += \
+./Clibrary/l3gd20/l3gd20.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

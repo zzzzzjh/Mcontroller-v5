@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/buzzer/buzzer.c 
 
-C_DEPS += \
-./Clibrary/buzzer/buzzer.d 
-
 OBJS += \
 ./Clibrary/buzzer/buzzer.o 
+
+C_DEPS += \
+./Clibrary/buzzer/buzzer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

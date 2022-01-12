@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/mpu6000/mpu6000.c 
 
-C_DEPS += \
-./Clibrary/mpu6000/mpu6000.d 
-
 OBJS += \
 ./Clibrary/mpu6000/mpu6000.o 
+
+C_DEPS += \
+./Clibrary/mpu6000/mpu6000.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/ms5611/ms5611.c 
 
-C_DEPS += \
-./Clibrary/ms5611/ms5611.d 
-
 OBJS += \
 ./Clibrary/ms5611/ms5611.o 
+
+C_DEPS += \
+./Clibrary/ms5611/ms5611.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/fram/fram.c 
 
-C_DEPS += \
-./Clibrary/fram/fram.d 
-
 OBJS += \
 ./Clibrary/fram/fram.o 
+
+C_DEPS += \
+./Clibrary/fram/fram.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

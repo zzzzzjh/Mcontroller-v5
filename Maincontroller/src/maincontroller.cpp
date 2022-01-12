@@ -70,7 +70,7 @@ ap_t *ap=new ap_t();
 AHRS *ahrs=new AHRS(_dt);
 EKF_Baro *ekf_baro=new EKF_Baro(_dt, 0.0016, 0.000016, 0.000016);
 EKF_Rangefinder *ekf_rangefinder=new EKF_Rangefinder(_dt, 1.0, 0.000016, 0.16);
-EKF_Odometry *ekf_odometry=new EKF_Odometry(_dt, 1.0, 1.0, 0.0025, 2.5, 0.0025, 2.5);
+EKF_Odometry *ekf_odometry=new EKF_Odometry(_dt, 0.5, 0.5, 0.16, 0.16, 0.16, 0.16);
 EKF_GNSS *ekf_gnss=new EKF_GNSS(_dt, 1.0, 1.0, 0.0000001, 0.001, 0.0000001, 0.001);
 Motors *motors=new Motors(1/_dt);
 Attitude_Multi *attitude=new Attitude_Multi(*motors, gyro_filt, _dt);
@@ -1492,7 +1492,10 @@ void ekf_odom_xy(void){
 	if(!ahrs->is_initialed()||(!ahrs_healthy)){
 		return;
 	}
-	ekf_odometry->update(get_odom_xy,get_odom_x(),get_odom_y());
+	float theta=1.48;
+	float x_correct=uwb_position.x*cosf(theta)+uwb_position.y*sinf(theta);
+	float y_correct=-uwb_position.x*sinf(theta)+uwb_position.y*cosf(theta);
+	ekf_odometry->update(get_uwb_position,x_correct,y_correct);
 }
 
 void ekf_gnss_xy(void){
@@ -1503,11 +1506,11 @@ void ekf_gnss_xy(void){
 }
 
 float get_pos_x(void){//cm
-	return ekf_gnss->pos_x;
+	return ekf_odometry->pos_x;
 }
 
 float get_pos_y(void){//cm
-	return ekf_gnss->pos_y;
+	return ekf_odometry->pos_y;
 }
 
 float get_pos_z(void){//cm
@@ -1515,11 +1518,11 @@ float get_pos_z(void){//cm
 }
 
 float get_vel_x(void){//cm/s
-	return ekf_gnss->vel_x;
+	return ekf_odometry->vel_x;
 }
 
 float get_vel_y(void){//cm/s
-	return ekf_gnss->vel_y;
+	return ekf_odometry->vel_y;
 }
 
 float get_vel_z(void){//cm/s
@@ -2354,8 +2357,8 @@ void Logger_Update(void){
  * *******************code for test and debug*********************
  *****************************************************************/
 void debug(void){
-//	write_gpio2(true);
-//	usb_printf("ux:%f|uy:%f|uz:%f\n", uwb_position.x, uwb_position.y, uwb_position.z);
+	write_gpio2(true);
+	usb_printf("ux:%f|uy:%f|uz:%f|x:%f|y:%f|vx:%f|vy:%f\n", uwb_position.x, uwb_position.y, uwb_position.z, get_pos_x(), get_pos_y(),get_vel_x(), get_vel_y());
 //	usb_printf("gps_position lat:%lf ,lon:%lf ,alt:%lf \r\n" , (double)gps_position->lat/10000000.0,(double)gps_position->lon/10000000.0,(double)gps_position->alt/1000000.0);
 //	usb_printf("l:%d|%d|%d\n",*(__IO uint8_t*)((uint32_t)0x081D0000),*(__IO uint8_t*)((uint32_t)0x081D0001),*(__IO uint8_t*)((uint32_t)0x081D0002));
 //	usb_printf("l:%d\n",dataflash->get_addr_num_max());
@@ -2390,7 +2393,7 @@ void debug(void){
 //	usb_printf("hover:%f|%f\n",param->t_hover_update_min.value,param->t_hover_update_max.value);
 //	usb_printf("m:%d|%d\n",param.motor_type.value, param.robot_type.value);
 //	usb_printf("pos_x:%f|%f|%f|%f,pos_y:%f|%f|%f|%f\n",get_pos_x(),get_vel_x(),ned_current_pos.x, ned_current_vel.x,get_pos_y(),get_vel_y(),ned_current_pos.y,ned_current_vel.y);
-//	s2_printf("pitch:%f|roll:%f|yaw:%f\n", pitch_deg, roll_deg, yaw_deg);
+//	usb_printf("pitch:%f|roll:%f|yaw:%f\n", pitch_rad, roll_rad, yaw_rad);
 //	usb_printf("vib:%f\n", param->vib_land.value);
 //	s2_printf("x:%f,y:%f\n", x_target, y_target);
 //	usb_printf("pos_z:%f|%f|%f|%f\n",baro_alt_filt,get_pos_z(),get_vel_z(),accel_ef.z);

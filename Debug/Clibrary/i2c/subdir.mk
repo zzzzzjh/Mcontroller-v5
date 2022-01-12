@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/i2c/i2c.c 
 
-C_DEPS += \
-./Clibrary/i2c/i2c.d 
-
 OBJS += \
 ./Clibrary/i2c/i2c.o 
+
+C_DEPS += \
+./Clibrary/i2c/i2c.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

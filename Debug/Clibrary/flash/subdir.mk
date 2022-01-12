@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/flash/flash.c 
 
-C_DEPS += \
-./Clibrary/flash/flash.d 
-
 OBJS += \
 ./Clibrary/flash/flash.o 
+
+C_DEPS += \
+./Clibrary/flash/flash.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

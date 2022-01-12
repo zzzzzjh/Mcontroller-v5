@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Clibrary/rcout/rcout.c 
 
-C_DEPS += \
-./Clibrary/rcout/rcout.d 
-
 OBJS += \
 ./Clibrary/rcout/rcout.o 
+
+C_DEPS += \
+./Clibrary/rcout/rcout.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

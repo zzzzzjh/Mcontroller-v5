@@ -20,7 +20,7 @@ extern "C" {
 
 #define TAG_ID 0xFE
 #define MASTER_TAG 0xFE
-#define MAX_SLAVE_TAG 0x01
+#define MAX_SLAVE_TAG 0x02
 #define SLAVE_TAG_START_INDEX 0x01
 
 #define ANCHOR_MAX_NUM 4 //3 4
@@ -46,6 +46,8 @@ typedef enum{
 
 bool uwb_init(uwb_mode uwb_mode);
 void uwb_update(uwb_mode uwb_mode);
+void set_anchor_positon(uint8_t id, double x, double y, double z);
+extern bool get_uwb_position;
 
 #ifdef __cplusplus
 }

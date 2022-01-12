@@ -8,13 +8,13 @@ C_SRCS += \
 ../Clibrary/gnss/gps.c \
 ../Clibrary/gnss/ublox.c 
 
-C_DEPS += \
-./Clibrary/gnss/gps.d \
-./Clibrary/gnss/ublox.d 
-
 OBJS += \
 ./Clibrary/gnss/gps.o \
 ./Clibrary/gnss/ublox.o 
+
+C_DEPS += \
+./Clibrary/gnss/gps.d \
+./Clibrary/gnss/ublox.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

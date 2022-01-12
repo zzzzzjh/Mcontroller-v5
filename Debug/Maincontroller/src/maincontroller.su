@@ -197,56 +197,56 @@ maincontroller.cpp:1452:7:float get_baro_temp()	4	static
 maincontroller.cpp:1456:6:void ekf_baro_alt()	16	static
 maincontroller.cpp:1463:6:void ekf_rf_alt()	16	static
 maincontroller.cpp:1470:6:void gnss_update()	48	static
-maincontroller.cpp:1491:6:void ekf_odom_xy()	16	static
-maincontroller.cpp:1498:6:void ekf_gnss_xy()	32	static
-maincontroller.cpp:1505:7:float get_pos_x()	4	static
-maincontroller.cpp:1509:7:float get_pos_y()	4	static
-maincontroller.cpp:1513:7:float get_pos_z()	4	static
-maincontroller.cpp:1517:7:float get_vel_x()	4	static
-maincontroller.cpp:1521:7:float get_vel_y()	4	static
-maincontroller.cpp:1525:7:float get_vel_z()	4	static
-maincontroller.cpp:1532:7:float get_pilot_desired_yaw_rate(float)	40	static
-maincontroller.cpp:1572:6:void set_manual_throttle(bool)	16	static
-maincontroller.cpp:1574:6:bool has_manual_throttle()	4	static
-maincontroller.cpp:1578:6:void update_throttle_hover()	16	static
-maincontroller.cpp:1601:6:void set_throttle_takeoff()	8	static
-maincontroller.cpp:1607:7:float get_throttle_mid()	24	static
-maincontroller.cpp:1616:7:float get_pilot_desired_throttle(float, float)	40	static
-maincontroller.cpp:1652:7:float get_pilot_desired_climb_rate(float)	40	static
-maincontroller.cpp:1681:7:float get_non_takeoff_throttle()	8	static
-maincontroller.cpp:1690:7:float get_surface_tracking_climb_rate(float, float, float)	48	static
-maincontroller.cpp:1755:7:float get_rangefinder_alt()	4	static
-maincontroller.cpp:1760:7:float get_rangefinder_alt_target()	4	static
-maincontroller.cpp:1766:6:void set_accel_throttle_I_from_pilot_throttle()	24	static
-maincontroller.cpp:1776:6:void get_pilot_desired_lean_angles(float&, float&, float, float)	48	static
-maincontroller.cpp:1810:6:bool takeoff_running()	4	static
-maincontroller.cpp:1813:6:void takeoff_start(float)	24	static
-maincontroller.cpp:1830:6:bool takeoff_triggered(float)	16	static
-maincontroller.cpp:1844:6:void takeoff_stop()	4	static
-maincontroller.cpp:1854:6:void get_takeoff_climb_rates(float&, float&)	40	static
-maincontroller.cpp:1913:6:void set_land_complete(bool)	16	static
-maincontroller.cpp:1918:6:void rate_controller_run()	8	static
-maincontroller.cpp:1924:6:bool arm_motors()	8	static
-maincontroller.cpp:1958:6:void disarm_motors()	8	static
-maincontroller.cpp:1980:6:void unlock_motors()	8	static
-maincontroller.cpp:1997:6:void lock_motors()	8	static
-maincontroller.cpp:2009:6:void motors_output()	8	static
-maincontroller.cpp:2018:6:void update_land_detector()	24	static
-maincontroller.cpp:2086:6:void update_throttle_thr_mix()	48	static
-maincontroller.cpp:2129:6:void throttle_loop()	8	static
-maincontroller.cpp:2138:6:void arm_motors_check()	16	static
-maincontroller.cpp:2192:6:void set_throttle_zero_flag(float)	24	static
-maincontroller.cpp:2212:6:void lock_motors_check()	16	static
-maincontroller.cpp:2230:6:void zero_throttle_and_relax_ac()	8	static
-maincontroller.cpp:2249:6:void parse_comm0_data(uint8_t)	16	static
-maincontroller.cpp:2253:6:void parse_comm1_data(uint8_t)	16	static
-maincontroller.cpp:2257:6:void parse_comm2_data(uint8_t)	16	static
-maincontroller.cpp:2261:6:void parse_comm3_data(uint8_t)	16	static
-maincontroller.cpp:2265:6:void parse_comm4_data(uint8_t)	16	static
-maincontroller.cpp:2275:6:void Logger_Cat_Callback()	32	static
-maincontroller.cpp:2315:6:void Logger_Data_Callback()	112	static
-maincontroller.cpp:2349:6:void Logger_Update()	8	static
-maincontroller.cpp:2356:6:void debug()	4	static
+maincontroller.cpp:1491:6:void ekf_odom_xy()	32	static
+maincontroller.cpp:1501:6:void ekf_gnss_xy()	32	static
+maincontroller.cpp:1508:7:float get_pos_x()	4	static
+maincontroller.cpp:1512:7:float get_pos_y()	4	static
+maincontroller.cpp:1516:7:float get_pos_z()	4	static
+maincontroller.cpp:1520:7:float get_vel_x()	4	static
+maincontroller.cpp:1524:7:float get_vel_y()	4	static
+maincontroller.cpp:1528:7:float get_vel_z()	4	static
+maincontroller.cpp:1535:7:float get_pilot_desired_yaw_rate(float)	40	static
+maincontroller.cpp:1575:6:void set_manual_throttle(bool)	16	static
+maincontroller.cpp:1577:6:bool has_manual_throttle()	4	static
+maincontroller.cpp:1581:6:void update_throttle_hover()	16	static
+maincontroller.cpp:1604:6:void set_throttle_takeoff()	8	static
+maincontroller.cpp:1610:7:float get_throttle_mid()	24	static
+maincontroller.cpp:1619:7:float get_pilot_desired_throttle(float, float)	40	static
+maincontroller.cpp:1655:7:float get_pilot_desired_climb_rate(float)	40	static
+maincontroller.cpp:1684:7:float get_non_takeoff_throttle()	8	static
+maincontroller.cpp:1693:7:float get_surface_tracking_climb_rate(float, float, float)	48	static
+maincontroller.cpp:1758:7:float get_rangefinder_alt()	4	static
+maincontroller.cpp:1763:7:float get_rangefinder_alt_target()	4	static
+maincontroller.cpp:1769:6:void set_accel_throttle_I_from_pilot_throttle()	24	static
+maincontroller.cpp:1779:6:void get_pilot_desired_lean_angles(float&, float&, float, float)	48	static
+maincontroller.cpp:1813:6:bool takeoff_running()	4	static
+maincontroller.cpp:1816:6:void takeoff_start(float)	24	static
+maincontroller.cpp:1833:6:bool takeoff_triggered(float)	16	static
+maincontroller.cpp:1847:6:void takeoff_stop()	4	static
+maincontroller.cpp:1857:6:void get_takeoff_climb_rates(float&, float&)	40	static
+maincontroller.cpp:1916:6:void set_land_complete(bool)	16	static
+maincontroller.cpp:1921:6:void rate_controller_run()	8	static
+maincontroller.cpp:1927:6:bool arm_motors()	8	static
+maincontroller.cpp:1961:6:void disarm_motors()	8	static
+maincontroller.cpp:1983:6:void unlock_motors()	8	static
+maincontroller.cpp:2000:6:void lock_motors()	8	static
+maincontroller.cpp:2012:6:void motors_output()	8	static
+maincontroller.cpp:2021:6:void update_land_detector()	24	static
+maincontroller.cpp:2089:6:void update_throttle_thr_mix()	48	static
+maincontroller.cpp:2132:6:void throttle_loop()	8	static
+maincontroller.cpp:2141:6:void arm_motors_check()	16	static
+maincontroller.cpp:2195:6:void set_throttle_zero_flag(float)	24	static
+maincontroller.cpp:2215:6:void lock_motors_check()	16	static
+maincontroller.cpp:2233:6:void zero_throttle_and_relax_ac()	8	static
+maincontroller.cpp:2252:6:void parse_comm0_data(uint8_t)	16	static
+maincontroller.cpp:2256:6:void parse_comm1_data(uint8_t)	16	static
+maincontroller.cpp:2260:6:void parse_comm2_data(uint8_t)	16	static
+maincontroller.cpp:2264:6:void parse_comm3_data(uint8_t)	16	static
+maincontroller.cpp:2268:6:void parse_comm4_data(uint8_t)	16	static
+maincontroller.cpp:2278:6:void Logger_Cat_Callback()	32	static
+maincontroller.cpp:2318:6:void Logger_Data_Callback()	112	static
+maincontroller.cpp:2352:6:void Logger_Update()	8	static
+maincontroller.cpp:2359:6:void debug()	104	static
 vector2.h:22:15:constexpr Vector2<T>::Vector2(T, T) [with T = float]	24	static
 matrix3.h:47:15:constexpr Matrix3<T>::Matrix3(T, T, T, T, T, T, T, T, T) [with T = float]	24	static
 vector3.h:148:16:Vector3<T> Vector3<T>::normalized() const [with T = float]	16	static
@@ -254,5 +254,5 @@ vector3.h:142:10:void Vector3<T>::zero() [with T = float]	16	static
 math_inc.h:199:7:) [with T = float; U = float; Params = {}]	16	static
 math_inc.h:179:7:float sq(T) [with T = float]	16	static
 math_inc.h:189:7:) [with T = float; Params = {float}]	24	static
-maincontroller.cpp:2412:1:void __static_initialization_and_destruction_0(int, int)	40	static
-maincontroller.cpp:2412:1:cpp)	8	static
+maincontroller.cpp:2415:1:void __static_initialization_and_destruction_0(int, int)	40	static
+maincontroller.cpp:2415:1:cpp)	8	static
